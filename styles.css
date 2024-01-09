@@ -1,0 +1,192 @@
+/* Estilos de letra */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.918); /* Cambiado a gris */
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    color: #0066cc; /* Mantenido el color azul */
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Animaciones para botones y enlaces */
+a, button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    background-color: #fdba00; /* Cambiado a amarillo */
+    color: #333; /* Cambiado a gris oscuro */
+}
+
+a:hover, button:hover {
+    background-color: rgb(0, 46, 252); /* Cambiado a un tono más claro de amarillo al hacer hover */
+    transform: translateY(-5px); /* Efecto de deslizamiento hacia arriba */
+    color: #fdba00; /* Cambiado a amarillo */
+}
+
+
+/* Animación adicional para los botones */
+button {
+    animation: scaleButton 0.3s ease;
+}
+
+@keyframes scaleButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Clase para centrar el contenido */
+.center {
+    text-align: center;
+    position: relative; /* Añadido para resolver problemas con z-index */
+    z-index: 2; /* Añadido para resolver problemas con z-index */
+}
+
+/* Clase para limitar el texto */
+.text {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: left;
+}
+
+/* Estilo para la imagen de fondo */
+.fondo-arriba {
+    position: relative;
+    background-size: 100% 40vh;
+    background-color: #ffffff;
+}
+
+/* Pseudo-elemento para aplicar un filtro gris oscuro con opacidad */
+.fondo-arriba::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 49, 49, 0.5); /* Gris oscuro con opacidad del 50% */
+    z-index: -1; /* Ajustado para que el pseudo-elemento esté detrás del contenido */
+}
+
+/* Clase para centrar elementos en el centro del div */
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Opcional: ajusta según sea necesario */
+}
+
+.white{
+    color: white;
+}
+
+/* Clase para centrar el contenido */
+.center {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Clase para limitar el texto */
+.compact-text-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.compact-text{
+    text-align: left;
+    width: 48%; /* O ajusta según sea necesario para dar espacio a ambos textos */
+}
+.additional-text {
+    text-align: right;
+    width: 48%; /* O ajusta según sea necesario para dar espacio a ambos textos */
+}
+
+/* Ajustes adicionales según tus preferencias */
+.compact-text {
+    margin-right: 2%;
+}
+
+.additional-text {
+    margin-left: 2%;
+}
+
+/* Añade estas animaciones al archivo styles.css o en el mismo encabezado */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+footer {
+    background-color: #e9e9e9;
+    color: #000000;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo-container img {
+    max-width: 100px;
+  }
+  
+  .logo-container p {
+    margin-top: 10px;
+    color: #000000;
+  }
+  
+  input[type=text] {
+    transition: background-color 0.5s ease;
+  }
+  
+  input[type=text]:hover {
+    background-color: #fdba00;
+  }
+
+  .header {
+    text-align: center;     
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    white-space: pre-line;
+}
