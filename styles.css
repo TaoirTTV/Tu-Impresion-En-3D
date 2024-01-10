@@ -17,6 +17,7 @@ p {
     line-height: 1.5;
 }
 
+
 /* Animaciones para botones y enlaces */
 a, button {
     display: inline-block;
@@ -89,7 +90,7 @@ button {
 /* Clase para centrar elementos en el centro del div */
 .center-div {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     height: 100%; /* Opcional: ajusta según sea necesario */
 }
