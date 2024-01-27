@@ -303,7 +303,7 @@ footer {
     border-radius: 5px;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     background-color: #000000; /* Cambiado a amarillo */
-    color: #ffffff; /* Cambiado a gris oscuro */
+    color: #000000; /* Cambiado a gris oscuro */
 }
 
 .shopButtons:hover {
