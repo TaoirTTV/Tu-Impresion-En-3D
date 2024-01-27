@@ -19,10 +19,9 @@ p {
 
 
 /* Animaciones para botones y enlaces */
-a, button {
+button {
     display: inline-block;
     padding: 10px 20px;
-    margin: 10px;
     text-decoration: none;
     border-radius: 5px;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -36,7 +35,7 @@ a, button {
   
     
 
-a:hover, button:hover {
+button:hover {
     background-color: rgb(0, 46, 252); /* Cambiado a un tono más claro de amarillo al hacer hover */
     transform: translateY(-5px); /* Efecto de deslizamiento hacia arriba */
     color: #fdba00; /* Cambiado a amarillo */
@@ -92,9 +91,70 @@ button {
 /* Estilo para la imagen de fondo */
 .fondo-arriba {
     position: relative;
-    background-size: 100% 40vh;
-    background-color: #ffffff;
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
 }
+
+.whitered-a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    background-color: #ffffff; /* Cambiado a amarillo */
+    color: #333; /* Cambiado a gris oscuro */ 
+}
+
+.whitered-a:hover {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    background-color: #363636; /* Cambiado a amarillo */
+    color: #ffffff; /* Cambiado a gris oscuro */ 
+}
+
+.fondo-arriba::after {
+    content: "";
+    background: url('ruta/a/tu/imagen.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;     
+}
+
+.fondo-arriba video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(50%);
+}
+
+
+
+@media (max-aspect-ratio: 16/9) {
+    .fondo-arriba video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.center {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
 
 /* Pseudo-elemento para aplicar un filtro gris oscuro con opacidad */
 .fondo-arriba::before {
@@ -211,4 +271,43 @@ footer {
 
 .header h1 {
     white-space: pre-line;
+}
+
+/* Añade un color de fondo negro a la barra de navegación */
+.topnav {
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* Estilo para los enlaces dentro de la barra de navegación */
+.topnav a {
+    float: right;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.5s ease;
+}
+
+/* Cambia el color de los enlaces al pasar el ratón por encima */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.shopButtons {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    background-color: #000000; /* Cambiado a amarillo */
+    color: #ffffff; /* Cambiado a gris oscuro */
+}
+
+.shopButtons:hover {
+    background-color: rgb(255, 255, 255); /* Cambiado a un tono más claro de amarillo al hacer hover */
+    transform: translateY(-5px); /* Efecto de deslizamiento hacia arriba */
+    color: #000000; /* Cambiado a amarillo */
 }
