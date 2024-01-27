@@ -1,2 +1,0 @@
-nombre1;descripcion1;10
-nombre2;descripcion2;20
