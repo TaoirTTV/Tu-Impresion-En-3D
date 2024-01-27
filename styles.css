@@ -96,6 +96,32 @@ button {
     overflow: hidden;
 }
 
+.fondo-arriba::after {
+    content: "";
+    background: url('ruta/a/tu/imagen.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;     
+}
+
+.fondo-arriba video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción del video */
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(50%);
+}
+
+
 .whitered-a {
     display: inline-block;
     padding: 10px 20px;
@@ -115,32 +141,6 @@ button {
     background-color: #363636; /* Cambiado a amarillo */
     color: #ffffff; /* Cambiado a gris oscuro */ 
 }
-
-.fondo-arriba::after {
-    content: "";
-    background: url('ruta/a/tu/imagen.jpg') no-repeat center center fixed;
-    background-size: cover;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;     
-}
-
-.fondo-arriba video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    filter: brightness(50%);
-}
-
-
 
 @media (max-aspect-ratio: 16/9) {
     .fondo-arriba video {
