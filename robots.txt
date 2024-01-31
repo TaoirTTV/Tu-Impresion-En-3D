@@ -1,0 +1,7 @@
+User-agent: //
+
+Disallow: /contactType.html
+Disallow: /Sorteos.html
+
+# Allow the sitemap
+Allow: /sitemap.xml
