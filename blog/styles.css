@@ -90,19 +90,36 @@ ul, ol {
     margin-bottom: 15px;
 }
 
-/* Pie de página */
+/* Estilos para el footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+    background-color: #f2f2f2;
     padding: 20px 0;
+    text-align: center;
 }
 
-/* Enlaces */
-a {
-    text-decoration: none;
+.blackFooter{
+    background-color: #252525;
+    padding: 20px 0;
+    text-align: center;
 }
 
-a:hover {
-    text-decoration: underline;
+.footer-social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-social-media ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-social-media ul li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social-media ul li img:hover {
+    transform: scale(1.1);
 }
