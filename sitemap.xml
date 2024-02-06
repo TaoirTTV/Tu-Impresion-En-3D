@@ -24,4 +24,22 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://tuimpresionen3d.com/blog/index.html</loc>
+        <lastmod>2024-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tuimpresionen3d.com/blog/MejoresImpresoras2024.html</loc>
+        <lastmod>2024-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tuimpresionen3d.com/blog/comoCalibrarTuImpresora3D.html</loc>
+        <lastmod>2024-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
