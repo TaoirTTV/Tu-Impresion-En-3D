@@ -372,3 +372,53 @@ footer {
     transform: translateY(-5px); /* Efecto de deslizamiento hacia arriba */
     color: #000000; /* Cambiado a amarillo */
 }
+
+
+/* Ocultar el submenú por defecto */
+#menu-servicios ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1; /* Añadido para que el submenú se superponga a otros elementos */
+  }
+  
+  /* Mostrar el submenú al hacer hover sobre el elemento padre */
+  #menu-servicios:hover ul {
+    display: block;
+  }
+  
+  /* Animación para mostrar el submenú */
+  #menu-servicios:hover ul {
+    animation: mostrarSubmenu 0.3s ease-in-out;
+  }
+  
+  @keyframes mostrarSubmenu {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilos adicionales para el submenú */
+  #menu-servicios ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #menu-servicios ul li a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  #menu-servicios ul li a:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .rounded-image {
+    border-radius: 5%; /* This will create a circular image */
+  }
