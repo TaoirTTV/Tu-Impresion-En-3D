@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llaveros personalizados | Tu Impresión en 3D</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .carrusel-producto {
+            position: relative;
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .carrusel-producto.vertical-fotos {
+            aspect-ratio: 3/4;
+            max-width: 340px;
+            max-height: 453px;
+        }
+        .carrusel-producto.vertical-fotos .carrusel-img {
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            height: 100%;
+            max-height: 453px;
+        }
+        .carrusel-img {
+            display: none;
+            width: 100%;
+            border-radius: 12px;
+            transition: opacity 0.4s;
+        }
+        .carrusel-img.active {
+            display: block;
+        }
+        .carrusel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #ffd33d;
+            color: #232323;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0.8;
+            z-index: 2;
+        }
+        .carrusel-btn.prev { left: 8px; }
+        .carrusel-btn.next { right: 8px; }
+        .carrusel-btn:hover { background: #f9c513; }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html" title="Inicio Tu Impresión en 3D">
+                <img src="img/tuimpresionen3dlogoLow.png" alt="Logo Tu Impresión en 3D">
+            </a>
+        </div>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html#servicios" title="Ver servicios de impresión 3D">Servicios</a></li>
+                <li><a href="index.html#contacto" title="Formulario de contacto">Contacto</a></li>
+                <li><a href="tienda.html" title="Tienda" style="color:#ffd33d;">Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" style="min-height: 40vh;">
+            <h1>Llaveros personalizados</h1>
+            <div class="hero-bar"></div>
+        </section>
+        <section class="servicios" style="background:#fff; color:#232323;">
+            <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; align-items:center; max-width:900px; margin:0 auto;">
+                <div style="max-width:340px; width:100%;">
+                    <div class="carrusel-producto vertical-fotos">
+                        <img src="img/llaverospersonalizadosancora.jpg" alt="Llaveros personalizados 1" class="carrusel-img active">
+                        <!-- Si tienes más imágenes de llaveros personalizados, añádelas aquí -->
+                        <button class="carrusel-btn prev" onclick="cambiarImagen(-1)">&#10094;</button>
+                        <button class="carrusel-btn next" onclick="cambiarImagen(1)">&#10095;</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:260px;">
+                    <h2>Llaveros personalizados</h2>
+                    <p>Llaveros únicos con el diseño que elijas. Personaliza tu llavero con nombre, logo, forma o mensaje especial.</p>
+                    <p style="font-weight:bold; font-size:1.2rem;">Precio: Consultar</p>
+                    <button class="boton-compra" onclick="window.location.href='mailto:info@tuimpresionen3d.com?subject=Consulta%20Llaveros%20Personalizados'">Consultar por email</button>
+                    <button class="boton-compra" style="margin-top:0.5rem;" onclick="window.open('https://wa.me/34644643895?text=Hola,%20quiero%20información%20sobre%20llaveros%20personalizados','_blank')">Consultar por WhatsApp</button>
+                </div>
+            </div>
+        </section>
+        <section class="servicios" style="padding-top:2rem;">
+            <h2 style="color:#ffd33d;">Productos que quizás te interesen</h2>
+            <div class="servicios-lista" style="justify-content:center;">
+                <div class="servicio clickeable" onclick="window.location.href='producto-llaveros-spotify.html'">
+                    <img src="img/llaverosspotify.jpg" alt="Llaveros Spotify">
+                    <h3>Llaveros Spotify</h3>
+                </div>
+                <div class="servicio clickeable" onclick="window.location.href='producto-fotos-impresas.html'">
+                    <img src="img/foto impresa1.jpg" alt="Fotos impresas">
+                    <h3>Fotos impresas</h3>
+                </div>
+                <div class="servicio clickeable" onclick="window.location.href='producto-logo-imagen.html'">
+                    <img src="img/logopersonalizado1.jpg" alt="Logo personalizado">
+                    <h3>Logo personalizado</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tu Impresión en 3D. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+    function cambiarImagen(n) {
+        var carrusel = document.querySelector('.carrusel-producto');
+        var imgs = carrusel.querySelectorAll('.carrusel-img');
+        var actual = Array.from(imgs).findIndex(img => img.classList.contains('active'));
+        imgs[actual].classList.remove('active');
+        let nuevo = (actual + n + imgs.length) % imgs.length;
+        imgs[nuevo].classList.add('active');
+    }
+    </script>
+</body>
+</html>

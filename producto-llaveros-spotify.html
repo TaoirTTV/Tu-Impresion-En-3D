@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llaveros Spotify | Tu Impresión en 3D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html" title="Inicio Tu Impresión en 3D">
+                <img src="img/tuimpresionen3dlogoLow.png" alt="Logo Tu Impresión en 3D">
+            </a>
+        </div>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html#servicios" title="Ver servicios de impresión 3D">Servicios</a></li>
+                <li><a href="index.html#galeria" title="Ver galería de trabajos 3D">Galería</a></li>
+                <li><a href="index.html#contacto" title="Formulario de contacto">Contacto</a></li>
+                <li><a href="tienda.html" title="Tienda">Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" style="min-height: 40vh;">
+            <h1>Llaveros Spotify</h1>
+            <div class="hero-bar"></div>
+        </section>
+        <section class="servicios" style="background:#fff; color:#232323;">
+            <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; align-items:center; max-width:900px; margin:0 auto;">
+                <img src="img/llaverosSpotify.jpg" alt="Llaveros Spotify" style="max-width:340px; width:100%; border-radius:12px;">
+                <div style="flex:1; min-width:260px;">
+                    <h2>Llaveros Spotify</h2>
+                    <p>Envíanos el enlace de tu canción o playlist favorita de Spotify y lo convertiremos en un hermoso llavero con un código de Spotify.</p>
+                    <p style="font-weight:bold; font-size:1.2rem;">Precio: 9,94&nbsp;€ (pack de 3)</p>
+                    <button class="boton-compra" onclick="window.open('https://www.paypal.com/instantcommerce/checkout/JYNM4BHY97MX8','_blank')">Comprar ahora</button>
+                </div>
+            </div>
+        </section>
+        <section class="servicios" style="padding-top:2rem;">
+            <h2 style="color:#ffd33d;">Productos que quizás te interesen</h2>
+            <div class="servicios-lista" style="justify-content:center;">
+                <div class="servicio clickeable" onclick="window.location.href='producto-fotos-impresas.html'">
+                    <img src="img/Foto impresa1.jpg" alt="Fotos impresas 10cm">
+                    <h3>Fotos impresas</h3>
+                </div>
+                <div class="servicio clickeable" onclick="window.location.href='producto-nike-jordan.html'">
+                    <img src="img/JordanImpresasEn3D.jpg" alt="Nike Jordan">
+                    <h3>Nike Jordan</h3>
+                </div>
+                <div class="servicio clickeable" onclick="window.location.href='producto-escudos-personalizados.html'">
+                    <img src="img/Escudo1.jpg" alt="Escudos personalizados">
+                    <h3>Escudos personalizados</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tu Impresión en 3D. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escudos personalizados | Tu Impresión en 3D</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .carrusel-producto {
+            position: relative;
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .carrusel-img {
+            display: none;
+            width: 100%;
+            border-radius: 12px;
+            transition: opacity 0.4s;
+        }
+        .carrusel-img.active {
+            display: block;
+        }
+        .carrusel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #ffd33d;
+            color: #232323;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0.8;
+            z-index: 2;
+        }
+        .carrusel-btn.prev { left: 8px; }
+        .carrusel-btn.next { right: 8px; }
+        .carrusel-btn:hover { background: #f9c513; }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html" title="Inicio Tu Impresión en 3D">
+                <img src="img/tuimpresionen3dlogoLow.png" alt="Logo Tu Impresión en 3D">
+            </a>
+        </div>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html#servicios" title="Ver servicios de impresión 3D">Servicios</a></li>
+                <li><a href="index.html#galeria" title="Ver galería de trabajos 3D">Galería</a></li>
+                <li><a href="index.html#contacto" title="Formulario de contacto">Contacto</a></li>
+                <li><a href="tienda.html" title="Tienda" style="color:#ffd33d;">Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" style="min-height: 40vh;">
+            <h1>Escudos personalizados</h1>
+            <div class="hero-bar"></div>
+        </section>
+        <section class="servicios" style="background:#fff; color:#232323;">
+            <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; align-items:center; max-width:900px; margin:0 auto;">
+                <div style="max-width:340px; width:100%;">
+                    <div class="carrusel-producto">
+                        <img src="img/Escudo1.jpg" alt="Escudo personalizado 1" class="carrusel-img active">
+                        <img src="img/escudo-personalizado-2.jpg" alt="Escudo personalizado 2" class="carrusel-img">
+                        <!-- Añade más imágenes si tienes -->
+                        <button class="carrusel-btn prev" onclick="cambiarImagen(-1)">&#10094;</button>
+                        <button class="carrusel-btn next" onclick="cambiarImagen(1)">&#10095;</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:260px;">
+                    <h2>Escudos personalizados</h2>
+                    <p>¿Estás orgulloso de tu equipo de fútbol? Adquiere este artículo para demostrar tu amor por el fútbol a todos tus amigos.</p>
+                    <p style="font-weight:bold; font-size:1.2rem;">Precio: 34,95&nbsp;€</p>
+                    <button class="boton-compra" onclick="window.open('https://py.pl/6rNbLkxo2ne','_blank')">Comprar ahora</button>
+                </div>
+            </div>
+        </section>
+        <section class="servicios" style="padding-top:2rem;">
+            <h2 style="color:#ffd33d;">Productos que quizás te interesen</h2>
+            <div class="servicios-lista" style="justify-content:center;">
+                <div class="servicio clickeable" onclick="window.location.href='producto-nike-jordan.html'">
+                    <img src="img/JordanImpresasEn3D.jpg" alt="Nike Jordan">
+                    <h3>Nike Jordan</h3>
+                </div>
+                <div class="servicio clickeable" onclick="window.location.href='producto-fotos-impresas.html'">
+                    <img src="img/foto impresa1.jpg" alt="Fotos impresas">
+                    <h3>Fotos impresas</h3>
+                </div>
+                <div class="servicio clickeable" onclick="window.location.href='producto-llaveros-spotify.html'">
+                    <img src="img/llaverosspotify.jpg" alt="Llaveros Spotify">
+                    <h3>Llaveros Spotify</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tu Impresión en 3D. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function cambiarImagen(n) {
+            var carrusel = document.querySelector('.carrusel-producto');
+            var imgs = carrusel.querySelectorAll('.carrusel-img');
+            var actual = Array.from(imgs).findIndex(img => img.classList.contains('active'));
+            imgs[actual].classList.remove('active');
+            let nuevo = (actual + n + imgs.length) % imgs.length;
+            imgs[nuevo].classList.add('active');
+        }
+    </script>
+</body>
+</html>

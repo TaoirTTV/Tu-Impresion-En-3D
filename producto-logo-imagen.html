@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo o imagen personalizada | Tu Impresión en 3D</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body, .servicios {
+        background: #161b22 !important;
+        color: #fff !important;
+    }
+    #contacto-logo, #form-logo {
+        background: #21262d;
+        border-radius: 12px;
+        padding: 1.5rem 1rem;
+        margin-top: 1.5rem;
+        box-shadow: 0 2px 8px #0005;
+        color: #fff;
+    }
+    #contacto-logo p {
+        color: #ffd33d;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    #form-logo input, #form-logo textarea {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.7rem;
+        border-radius: 8px;
+        border: 1px solid #30363d;
+        background: #0d1117;
+        color: #fff;
+        font-size: 1rem;
+    }
+    #form-logo textarea {
+        min-height: 90px;
+        resize: vertical;
+    }
+    .fade-form {
+        transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html" title="Inicio Tu Impresión en 3D">
+                <img src="img/tuimpresionen3dlogoLow.png" alt="Logo Tu Impresión en 3D">
+            </a>
+        </div>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html#servicios" title="Ver servicios de impresión 3D">Servicios</a></li>
+                <!-- <li><a href="index.html#galeria" title="Ver galería de trabajos 3D">Galería</a></li> -->
+                <li><a href="index.html#contacto" title="Formulario de contacto">Contacto</a></li>
+                <li><a href="tienda.html" title="Tienda" style="color:#ffd33d;">Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" style="min-height: 40vh;">
+            <h1>Tu logo/imagen de cualquier tamaño</h1>
+            <div class="hero-bar"></div>
+        </section>
+        <section class="servicios">
+            <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; align-items:center; max-width:900px; margin:0 auto;">
+                <div style="flex:1; min-width:260px;">
+                    <h2>Logo o imagen personalizada</h2>
+                    <p>Imprime tu logo o imagen en el tamaño que necesites.</p>
+                    <button class="boton-compra" id="consultar-logo" style="margin-top:1rem;">Consultar</button>
+                    <div id="contacto-logo" style="display:none;">
+                        <p>¿Cómo prefieres contactar?</p>
+                        <button class="boton-compra" id="btn-logo-whatsapp">WhatsApp</button>
+                        <button class="boton-compra" id="btn-logo-email">Correo electrónico</button>
+                        <form id="form-logo" action="https://formsubmit.co/info@tuimpresionen3d.com" method="POST" autocomplete="off" class="fade-form" style="display:none; opacity:0;">
+                            <input type="hidden" name="_subject" value="Consulta sobre logo o imagen personalizada">
+                            <input type="text" name="nombre" placeholder="Nombre" required>
+                            <input type="email" name="email" placeholder="Correo electrónico" required>
+                            <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required>Hola, quiero información sobre logo o imagen personalizada.</textarea>
+                            <button type="submit" class="boton-compra">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ...productos similares si quieres... -->
+    </main>
+    <footer>
+        <!-- ...existing code from index... -->
+    </footer>
+    <script>
+    document.getElementById('consultar-logo').onclick = function() {
+        document.getElementById('contacto-logo').style.display = 'block';
+        this.style.display = 'none';
+    };
+    document.getElementById('btn-logo-whatsapp').onclick = function() {
+        window.open('https://wa.me/34644643895?text=Hola,%20quiero%20información%20sobre%20logo%20o%20imagen%20personalizada','_blank');
+    };
+    document.getElementById('btn-logo-email').onclick = function() {
+        const form = document.getElementById('form-logo');
+        this.style.display = 'none';
+        document.getElementById('btn-logo-whatsapp').style.display = 'none';
+        form.style.display = 'block';
+        setTimeout(() => {
+            form.style.opacity = '1';
+        }, 30);
+    };
+    </script>
+</body>
+</html>
