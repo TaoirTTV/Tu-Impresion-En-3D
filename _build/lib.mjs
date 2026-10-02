@@ -85,7 +85,7 @@ export const businessLd = {
     name: NAME,
     alternateName: ['TuImpresionEn3D', 'Tu Impresion En 3D', 'tuimpresionen3d'],
     description:
-        'Servicio de impresión 3D en Tarragona: impresión 3D bajo pedido, diseño y modelado 3D, prototipado rápido, piezas de repuesto, logos y letras corpóreas y regalos personalizados. Envíos a toda España.',
+        'Servicio de impresión 3D en Tarragona: impresión 3D bajo pedido, diseño y modelado 3D, prototipado rápido, piezas de repuesto, logos y letras corpóreas, llaveros, merchandising y regalos personalizados. Envíos a toda España.',
     slogan: 'Convertimos tus ideas en piezas reales',
     url: `${SITE}/`,
     logo: `${SITE}/assets/img/logo-tu-impresion-en-3d.png`,
@@ -109,13 +109,14 @@ export const businessLd = {
     knowsAbout: [
         'Impresión 3D', 'Impresión 3D FDM', 'Modelado 3D', 'Diseño 3D', 'Prototipado rápido',
         'PLA', 'PETG', 'ABS', 'Piezas de repuesto impresas en 3D', 'Letras corpóreas impresas en 3D', 'Regalos personalizados',
+        'Merchandising personalizado', 'Llaveros personalizados', 'Trofeos personalizados', 'Regalos de empresa',
     ],
     contactPoint: {
         '@type': 'ContactPoint',
         telephone: TEL,
         email: EMAIL,
         contactType: 'customer service',
-        availableLanguage: ['Spanish'],
+        availableLanguage: ['Spanish', 'Catalan'],
         areaServed: 'ES',
     },
     sameAs: Object.values(SOCIAL),
@@ -128,7 +129,10 @@ export const businessLd = {
             'Prototipado rápido',
             'Piezas de repuesto y piezas funcionales',
             'Logos, letras y rótulos impresos en 3D',
-            'Regalos y merchandising personalizado',
+            'Merchandising personalizado para empresas y eventos',
+            'Llaveros personalizados con logo o nombre',
+            'Trofeos personalizados',
+            'Regalos personalizados',
         ].map((n) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n, areaServed: 'Tarragona' } })),
     },
 };
@@ -192,10 +196,43 @@ export function faqHtml(faqs) {
 const NAV = [
     ['Inicio', '/'],
     ['Servicios', '/info.html'],
+    ['Merchandising', '/merchandising-personalizado-tarragona.html'],
     ['Tienda', '/tienda.html'],
     ['Proyectos', '/Projects/'],
     ['Blog', '/blog/'],
 ];
+
+// Textos de la plantilla por idioma (la web es en castellano; /ca/ es la portada en catalán)
+const UI = {
+    es: {
+        nav: NAV,
+        skip: 'Saltar al contenido',
+        tagline: 'Impresión 3D · Tarragona',
+        home: 'inicio',
+        menu: 'Abrir menú',
+        mainMenu: 'Menú principal',
+        cta: 'Pedir presupuesto',
+        about: 'Servicio de impresión 3D en Tarragona: piezas a medida, prototipos, diseño 3D, llaveros, merchandising y regalos personalizados. Envíos a toda España.',
+        waFloat: 'Escríbenos por WhatsApp',
+        bottom: 'Impresión 3D en Tarragona',
+        made: 'Hecho con filamento y cariño en Tarragona',
+        locale: 'es_ES',
+    },
+    ca: {
+        nav: [['Inici', '/ca/'], ['Serveis (ES)', '/info.html'], ['Marxandatge (ES)', '/merchandising-personalizado-tarragona.html'], ['Botiga (ES)', '/tienda.html'], ['Blog (ES)', '/blog/']],
+        skip: 'Salta al contingut',
+        tagline: 'Impressió 3D · Tarragona',
+        home: 'inici',
+        menu: 'Obre el menú',
+        mainMenu: 'Menú principal',
+        cta: 'Demana pressupost',
+        about: "Servei d'impressió 3D a Tarragona: peces a mida, prototips, disseny 3D, clauers, marxandatge i regals personalitzats. Enviaments a tot Espanya.",
+        waFloat: "Escriu-nos per WhatsApp",
+        bottom: 'Impressió 3D a Tarragona',
+        made: 'Fet amb filament i estima a Tarragona',
+        locale: 'ca_ES',
+    },
+};
 
 const ANALYTICS = `
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY1S7E92S2"></script>
@@ -225,30 +262,41 @@ export function layout({
     body,
     robots = 'index, follow, max-image-preview:large',
     preload = '',
+    lang = 'es',
+    alternates = null, // { es: '/', ca: '/ca/' } → enlaces hreflang
 }) {
+    const t = UI[lang];
     const canonical = `${SITE}${url}`;
-    const nav = NAV.map(([label, href]) =>
+    const hreflang = alternates
+        ? '\n    ' + [...Object.entries(alternates), ['x-default', alternates.es]]
+            .map(([l, u]) => `<link rel="alternate" hreflang="${l}" href="${SITE}${u}">`).join('\n    ')
+        : '';
+    const nav = t.nav.map(([label, href]) =>
         `<li><a href="${href}"${href === active ? ' aria-current="page"' : ''}>${label}</a></li>`).join('\n                    ');
     const html = `<!DOCTYPE html>
-<html lang="es">
+<html lang="${lang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${esc(title)}</title>
     <meta name="description" content="${esc(description)}">
-    <link rel="canonical" href="${canonical}">
+    <link rel="canonical" href="${canonical}">${hreflang}
     <meta name="robots" content="${robots}">
     <meta name="theme-color" content="#0b0e13">
     <meta name="geo.region" content="ES-T">
     <meta name="geo.placename" content="Tarragona">
-    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale" content="${t.locale}">
     <meta property="og:type" content="${ogType}">
     <meta property="og:site_name" content="${NAME}">
     <meta property="og:title" content="${esc(title)}">
     <meta property="og:description" content="${esc(description)}">
     <meta property="og:url" content="${canonical}">
     <meta property="og:image" content="${SITE}${ogImage}">
+    <meta property="og:image:alt" content="${esc(title)}">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${esc(title)}">
+    <meta name="twitter:description" content="${esc(description)}">
+    <meta name="twitter:image" content="${SITE}${ogImage}">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
@@ -259,18 +307,18 @@ export function layout({
     ${jsonld.map(ld).join('\n    ')}${ANALYTICS}${head}
 </head>
 <body>
-    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <a class="skip-link" href="#main">${t.skip}</a>
     <header class="site-header">
         <div class="container">
-            <a class="brand" href="/" aria-label="${NAME} — inicio">
+            <a class="brand" href="/" aria-label="${NAME} — ${t.home}">
                 <img src="/assets/img/logo-96.webp" width="44" height="44" alt="">
-                <span>${NAME}<small>Impresión 3D · Tarragona</small></span>
+                <span>${NAME}<small>${t.tagline}</small></span>
             </a>
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">${icon.menu}</button>
-            <nav class="main-nav" id="main-nav" aria-label="Menú principal">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="${t.menu}">${icon.menu}</button>
+            <nav class="main-nav" id="main-nav" aria-label="${t.mainMenu}">
                 <ul>
                     ${nav}
-                    <li><a class="nav-cta" href="/#contacto">Pedir presupuesto</a></li>
+                    <li><a class="nav-cta" href="${lang === 'ca' ? '/ca/#contacte' : '/#contacto'}">${t.cta}</a></li>
                 </ul>
             </nav>
         </div>
@@ -288,7 +336,7 @@ ${body}
                         <img src="/assets/img/logo-96.webp" width="44" height="44" alt="" loading="lazy">
                         <span>${NAME}</span>
                     </a>
-                    <p class="mt-2">Servicio de impresión 3D en Tarragona: piezas a medida, prototipos, diseño 3D y regalos personalizados. Envíos a toda España.</p>
+                    <p class="mt-2">${t.about}</p>
                     <div class="social">
                         <a href="${SOCIAL.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${icon.instagram}</a>
                         <a href="${SOCIAL.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${icon.tiktok}</a>
@@ -303,6 +351,8 @@ ${body}
                         <li><a href="/info.html#prototipos">Prototipado rápido</a></li>
                         <li><a href="/producto-logo-imagen.html">Logos y letras 3D</a></li>
                         <li><a href="/producto-trofeos-personalizados.html">Trofeos personalizados</a></li>
+                        <li><a href="/merchandising-personalizado-tarragona.html">Merchandising personalizado</a></li>
+                        <li><a href="/producto-llaveros-personalizados.html">Llaveros personalizados</a></li>
                     </ul>
                 </div>
                 <div>
@@ -312,6 +362,10 @@ ${body}
                         <li><a href="/Projects/">Proyectos</a></li>
                         <li><a href="/blog/">Blog</a></li>
                         <li><a href="/blog/cuanto-cuesta-imprimir-en-3d.html">Precios de impresión 3D</a></li>
+                        <li><a href="/impresion-3d-reus.html">Impresión 3D en Reus</a></li>
+                        <li><a href="/impresion-3d-salou.html">Impresión 3D en Salou</a></li>
+                        <li><a href="/impresion-3d-cambrils.html">Impresión 3D en Cambrils</a></li>
+                        <li><a href="/ca/" hreflang="ca" lang="ca">Impressió 3D (català)</a></li>
                         <li><a href="/privacidad.html">Política de privacidad</a></li>
                     </ul>
                 </div>
@@ -326,13 +380,13 @@ ${body}
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; <span id="year">2026</span> ${NAME} · Impresión 3D en Tarragona</span>
-                <span>Hecho con filamento y cariño en Tarragona</span>
+                <span>&copy; <span id="year">2026</span> ${NAME} · ${t.bottom}</span>
+                <span>${t.made}</span>
             </div>
         </div>
     </footer>
 
-    <a class="wa-float" href="${wa()}" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">${icon.whatsapp}</a>
+    <a class="wa-float" href="${wa()}" target="_blank" rel="noopener" aria-label="${t.waFloat}">${icon.whatsapp}</a>
     <script src="/main.js" defer></script>
 </body>
 </html>

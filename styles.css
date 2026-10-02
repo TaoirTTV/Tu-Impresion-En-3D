@@ -1607,3 +1607,12 @@ td strong {
         scroll-behavior: auto !important;
     }
 }
+
+.chips li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.chips li:has(a):hover {
+    border-color: var(--accent);
+}

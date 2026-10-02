@@ -11,6 +11,7 @@ node _build/build.mjs
 - `build.mjs`: contenido de todas las páginas, redirecciones, `sitemap.xml` y `llms.txt`.
 - `products.mjs`: catálogo de la tienda (genera `producto-*.html`).
 - `articles.mjs`: artículos del blog (genera `blog/*.html`). `group: 'clientes'` o `'makers'`.
+- `landings.mjs`: páginas de aterrizaje (merchandising y municipios: Reus, Salou, Cambrils) y textos de la portada en catalán (`/ca/`). Cada página debe tener contenido propio, no copias cambiando la ciudad.
 
 Las imágenes van en `assets/img/` como `nombre.webp` + `nombre-sm.webp` (ancho máx. 1400 y 700 px).
 Los estilos están en `styles.css` y el JS en `main.js` (se editan a mano).

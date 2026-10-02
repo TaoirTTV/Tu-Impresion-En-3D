@@ -86,6 +86,8 @@ export const PRODUCTS = [
         ],
         related: ['producto-logo-imagen', 'producto-escudos-personalizados', 'producto-llaveros-personalizados'],
         guide: ['Guía: cómo pedir trofeos personalizados para tu club o evento', '/blog/trofeos-personalizados-impresos-en-3d.html'],
+        seoTitle: 'Trofeos personalizados en Tarragona | Impresos en 3D con tu logo',
+        seoDescription: 'Trofeos personalizados impresos en 3D en Tarragona para clubes, torneos, academias y eventos de empresa. Con tu logo, colores y texto. Unidades sueltas o series. Presupuesto gratis.',
     },
     {
         slug: 'producto-logo-imagen',
@@ -108,6 +110,8 @@ export const PRODUCTS = [
         ],
         related: ['producto-trofeos-personalizados', 'producto-llaveros-personalizados', 'producto-escudos-personalizados'],
         guide: ['Guía: tipos de logos 3D, tamaños, montaje y qué archivo enviar', '/blog/logos-y-letras-3d-para-negocios.html'],
+        seoTitle: 'Logos y letras corpóreas 3D en Tarragona | Rótulos impresos en 3D',
+        seoDescription: 'Logos corpóreos, letras 3D y rótulos impresos en 3D en Tarragona para negocios, gimnasios, tiendas y eventos. Desde piezas de mostrador hasta más de 1 metro, con opción retroiluminada.',
     },
     {
         slug: 'producto-llaveros-personalizados',
@@ -125,6 +129,28 @@ export const PRODUCTS = [
             'Fabricados en Tarragona.',
         ],
         related: ['producto-llaveros-spotify', 'producto-logo-imagen', 'producto-fotos-impresas'],
+        seoTitle: 'Llaveros personalizados en Tarragona con logo o nombre | Impresos en 3D',
+        seoDescription: 'Llaveros personalizados impresos en 3D en Tarragona: con tu logo, nombre o diseño. Por unidades o en cantidad para empresas, clubes, bodas y eventos. Presupuesto gratis por WhatsApp.',
+        content: `
+                <h2>Llaveros personalizados en Tarragona para empresas, clubes y eventos</h2>
+                <p>Fabricamos llaveros personalizados impresos en 3D en nuestro taller de Tarragona. Puedes pedir un único llavero con un nombre o una serie de cientos de unidades con el logo de tu empresa. Como diseñamos cada modelo desde cero, el llavero puede tener la forma de tu logo, varios colores, relieve y texto por las dos caras.</p>
+                <h3>Usos más habituales</h3>
+                <ul>
+                    <li><strong>Merchandising de empresa:</strong> llaveros con logo para regalar a clientes, en ferias, inauguraciones o como detalle corporativo. Mira todo lo que hacemos en <a href="/merchandising-personalizado-tarragona.html">merchandising personalizado</a>.</li>
+                    <li><strong>Clubes y asociaciones:</strong> llaveros con el escudo del club para jugadores, socios o torneos.</li>
+                    <li><strong>Bodas, comuniones y bautizos:</strong> detalles para invitados con nombres y fecha.</li>
+                    <li><strong>Comercios y alojamientos:</strong> llaveros identificativos para habitaciones, taquillas o llaves de alquiler turístico.</li>
+                    <li><strong>Regalos:</strong> con el nombre de una persona, la silueta de tu mascota o un mensaje. Si te gusta la música, prueba los <a href="/producto-llaveros-spotify.html">llaveros Spotify</a>.</li>
+                </ul>
+                <h3>Cómo pedirlos</h3>
+                <p>Envíanos por WhatsApp o email tu logo (PNG, SVG o PDF) o una idea, la cantidad y la fecha en la que los necesitas. Te mandamos una propuesta de diseño y un presupuesto cerrado. Cuantas más unidades, más baja el precio de cada llavero. Entregamos en Tarragona, Reus, Salou, Cambrils y el resto del Camp de Tarragona, y enviamos a toda España.</p>`,
+        faqs: [
+            ['¿Cuántos llaveros personalizados tengo que pedir como mínimo?', 'Puedes pedir desde una sola unidad. Para merchandising de empresa lo habitual son series de 25, 50, 100 o más llaveros; cuantas más unidades, más económico sale cada uno.'],
+            ['¿Podéis hacer llaveros con el logo de mi empresa?', 'Sí. Partimos de tu logo en imagen (mejor en PNG con fondo transparente, SVG o PDF), lo convertimos en un modelo 3D y te enseñamos el diseño antes de fabricar.'],
+            ['¿De qué material son los llaveros?', 'Normalmente los imprimimos en PLA o PETG, en el color o la combinación de colores que elijas. Son ligeros y resistentes para el uso diario.'],
+            ['¿Cuánto tardáis en hacer un pedido de llaveros?', 'Depende de la cantidad y del diseño. Un pedido pequeño puede estar listo en pocos días; para series grandes te damos una fecha concreta con el presupuesto. Si tienes un evento, dinos la fecha y nos organizamos.'],
+            ['¿Hacéis envíos de llaveros fuera de Tarragona?', 'Sí. Entregamos en la zona de Tarragona y enviamos a cualquier punto de España.'],
+        ],
     },
     {
         slug: 'producto-llaveros-spotify',
@@ -144,6 +170,7 @@ export const PRODUCTS = [
             'Fabricados en Tarragona.',
         ],
         related: ['producto-llaveros-personalizados', 'producto-fotos-impresas', 'producto-escudos-personalizados'],
+        seoTitle: 'Llaveros Spotify personalizados (pack de 3) | 9,94 € | Tu Impresión en 3D',
     },
     {
         slug: 'producto-nike-jordan',
