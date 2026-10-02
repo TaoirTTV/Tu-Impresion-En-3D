@@ -41,7 +41,7 @@
         thumbs.forEach(function (t, n) { t.addEventListener('click', function () { show(n); }); });
     });
 
-    // Selector de variante con enlace de compra (p. ej. tamaño de foto)
+    // Selector de variante con enlace de pedido (p. ej. tamaño de foto)
     document.querySelectorAll('[data-variant-select]').forEach(function (select) {
         var button = document.getElementById(select.getAttribute('data-variant-select'));
         if (!button) return;
