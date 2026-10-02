@@ -1316,6 +1316,112 @@ td strong {
     margin: 2em 0;
 }
 
+/* ---------- Blog: resumen, índice, CTA y relacionados ---------- */
+
+.summary {
+    background: rgba(255, 211, 61, 0.07);
+    border: 1px solid rgba(255, 211, 61, 0.35);
+    border-radius: var(--radius-lg);
+    padding: 22px 26px;
+    margin-bottom: 28px;
+}
+
+.prose .summary-title {
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+    color: var(--accent);
+}
+
+.summary ul {
+    margin: 0;
+}
+
+.summary li {
+    color: var(--text);
+}
+
+.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px 26px;
+    margin-bottom: 12px;
+    font-size: 0.97rem;
+}
+
+.toc ol {
+    margin: 10px 0 0;
+}
+
+.toc li {
+    margin-bottom: 4px;
+}
+
+.toc a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.toc a:hover {
+    color: var(--accent);
+}
+
+.prose .table-wrap {
+    margin: 1.4em 0;
+}
+
+.prose .faq {
+    margin-top: 8px;
+}
+
+.prose .faq p {
+    color: var(--text-muted);
+}
+
+.cta-inline {
+    margin-top: 48px;
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(255, 61, 154, 0.22), transparent 55%),
+        linear-gradient(135deg, #1f2633, #151a23);
+    border: 1px solid var(--border);
+}
+
+.prose .cta-inline h2 {
+    margin-top: 0;
+}
+
+.cta-inline p {
+    color: var(--text-muted);
+}
+
+.related {
+    margin-top: 28px;
+    padding: 20px 26px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+}
+
+.related ul {
+    margin: 10px 0 0;
+}
+
+.prose .steps-inline li::marker {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.prose kbd,
+.prose code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1px 6px;
+}
+
 /* ---------- Pie ---------- */
 
 .site-footer {

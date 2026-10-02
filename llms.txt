@@ -32,7 +32,7 @@
 - [Escudo de fútbol personalizado con nombre](https://www.tuimpresionen3d.com/producto-escudos-personalizados.html): 34,95 €. Escudo de tu equipo en 3D con tu nombre. Un regalo perfecto para cualquier aficionado.
 - [Porta alianzas personalizado](https://www.tuimpresionen3d.com/producto-porta-alianzas.html): 24,94 €. Porta alianzas para tu boda con vuestros nombres y la frase que elijáis.
 - [Foto impresa en 3D (litofanía en relieve)](https://www.tuimpresionen3d.com/producto-fotos-impresas.html): Desde 12,95 €. Convierte tu foto favorita en una imagen en relieve impresa en 3D.
-- [Trofeos personalizados](https://www.tuimpresionen3d.com/producto-trofeos-personalizados.html): Consultar precio. Trofeos y medallas a medida para torneos, eventos, clubes y empresas.
+- [Trofeos personalizados](https://www.tuimpresionen3d.com/producto-trofeos-personalizados.html): Consultar precio. Trofeos a medida para torneos, eventos, clubes y empresas.
 - [Tu logo, letras o imagen en 3D a cualquier tamaño](https://www.tuimpresionen3d.com/producto-logo-imagen.html): Consultar precio. Logos corpóreos, letras y rótulos 3D para negocios, locales y eventos.
 - [Llaveros personalizados](https://www.tuimpresionen3d.com/producto-llaveros-personalizados.html): Consultar precio. Llaveros con tu logo, nombre o diseño. Por unidades o en cantidad para empresas.
 - [Llaveros Spotify (pack de 3)](https://www.tuimpresionen3d.com/producto-llaveros-spotify.html): 9,94 € (pack de 3). Tu canción favorita convertida en un llavero con código de Spotify escaneable.
@@ -47,17 +47,21 @@
 
 ## Guías
 
-- [¿Cuánto cuesta imprimir en 3D? Guía de precios](https://www.tuimpresionen3d.com/blog/cuanto-cuesta-imprimir-en-3d.html): Qué factores determinan el precio de una impresión 3D, ejemplos reales de precios y consejos para pagar menos por tus piezas.
-- [¿Merece la pena comprar una impresora 3D?](https://www.tuimpresionen3d.com/blog/merece-la-pena-comprar-impresora-3d.html): Ventajas de tener una impresora 3D en casa: versatilidad, personalización, ahorro y creatividad. Y cuándo es mejor encargar las piezas a un servicio de impresión 3D.
-- [Mejores impresoras 3D para empezar (guía 2024)](https://www.tuimpresionen3d.com/blog/mejores-impresoras-3d-para-empezar.html): Selección de impresoras 3D recomendadas en 2024 para principiantes y usuarios avanzados: Creality Ender 3 S1, Prusa i3 MK3S+, Anycubic Kobra Max, Elegoo Neptune 3 Pro y Creality Ender 5 Pro.
-- [¿Por qué mis piezas salen mal? Cómo calibrar una impresora 3D](https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html): Guía paso a paso para calibrar tu impresora 3D: nivelación de la cama, primera capa y pasos de los ejes X, Y y Z para que tus piezas salgan perfectas.
-- [Imprime más rápido sin perder calidad: boquillas de mayor tamaño](https://www.tuimpresionen3d.com/blog/imprimir-mas-rapido-boquillas-grandes.html): Cómo usar boquillas de 0,6 y 0,8 mm para imprimir en 3D mucho más rápido: ventajas, desventajas y ajustes recomendados.
+- [Cómo encargar una pieza impresa en 3D paso a paso](https://www.tuimpresionen3d.com/blog/como-encargar-impresion-3d.html): Guía práctica para encargar una impresión 3D: qué información enviar, cómo medir una pieza, qué archivos sirven, cómo se calcula el plazo y qué esperar en cada paso.
+- [¿Cuánto cuesta imprimir en 3D? Guía de precios](https://www.tuimpresionen3d.com/blog/cuanto-cuesta-imprimir-en-3d.html): Qué factores determinan el precio de una impresión 3D, por qué dos piezas del mismo tamaño pueden costar muy distinto, ejemplos reales de precios y cómo pagar menos.
+- [PLA, PETG o ABS: qué material elegir para tu pieza](https://www.tuimpresionen3d.com/blog/que-material-elegir-pla-petg-abs.html): Comparativa práctica de los materiales de impresión 3D más usados: resistencia al calor, al sol y a los golpes, usos recomendados y errores típicos al elegir.
+- [Piezas de repuesto impresas en 3D: qué se puede fabricar y qué no](https://www.tuimpresionen3d.com/blog/piezas-de-repuesto-impresas-en-3d.html): Cómo la impresión 3D puede salvar ese electrodoméstico, mueble o juguete al que se le ha roto una pieza descatalogada: ejemplos, límites y cómo pedir tu repuesto.
+- [Logos y letras 3D para tu negocio: tipos, tamaños y montaje](https://www.tuimpresionen3d.com/blog/logos-y-letras-3d-para-negocios.html): Guía para pedir el logo de tu negocio en 3D: logos en relieve, letras corpóreas y logos retroiluminados, cómo se fabrican piezas de más de un metro y qué archivo necesitamos.
+- [Trofeos personalizados impresos en 3D para clubes, torneos y empresas](https://www.tuimpresionen3d.com/blog/trofeos-personalizados-impresos-en-3d.html): Por qué un trofeo diseñado a medida marca la diferencia, qué información necesitamos, con cuánto margen pedirlo y ejemplos reales de trofeos impresos en 3D.
+- [¿Comprar una impresora 3D o encargar las piezas?](https://www.tuimpresionen3d.com/blog/comprar-impresora-3d-o-encargar.html): Comparativa honesta entre comprar tu propia impresora 3D y encargar las piezas a un servicio: costes reales, tiempo de aprendizaje y en qué casos compensa cada opción.
+- [Cómo calibrar una impresora 3D paso a paso](https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html): El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.
+- [Imprime más rápido sin perder calidad: boquillas de 0,6 y 0,8 mm](https://www.tuimpresionen3d.com/blog/imprimir-mas-rapido-boquillas-grandes.html): Cuánto tiempo ahorras con una boquilla de 0,6 u 0,8 mm, qué parámetros cambiar, el límite de flujo de tu hotend y en qué piezas compensa (y en cuáles no).
 
 ## Preguntas frecuentes
 
 ### ¿Dónde puedo imprimir en 3D en Tarragona?
 
-En Tu Impresión en 3D ofrecemos servicio de impresión 3D en Tarragona para particulares y empresas. Imprimimos tu archivo 3D o diseñamos la pieza desde cero a partir de una foto, un boceto o una pieza rota. Escríbenos por WhatsApp al +34 644 64 38 95 o por email a info@tuimpresionen3d.com y te damos presupuesto sin compromiso.
+En Tu Impresión en 3D ofrecemos servicio de impresión 3D en Tarragona para particulares y empresas. Imprimimos tu archivo 3D o diseñamos la pieza desde cero a partir de una foto, un boceto o una pieza rota. Escríbenos por WhatsApp al +34 644 64 38 95 o por email a info@tuimpresionen3d.com y te damos presupuesto sin compromiso. Si es tu primera vez, lee cómo encargar una pieza impresa en 3D.
 
 ### ¿Cuánto cuesta imprimir una pieza en 3D?
 
@@ -69,7 +73,7 @@ No. Si tienes el archivo (STL, 3MF, OBJ o STEP) lo imprimimos directamente. Si n
 
 ### ¿Qué materiales utilizáis?
 
-Trabajamos principalmente con PLA, PETG y ABS, en una amplia gama de colores. El PLA es ideal para piezas decorativas y prototipos, el PETG para piezas resistentes y de exterior y el ABS para piezas que soportan más temperatura. Si necesitas otro material, consúltanos.
+Trabajamos principalmente con PLA, PETG y ABS, en una amplia gama de colores. El PLA es ideal para piezas decorativas y prototipos, el PETG para piezas resistentes y de exterior y el ABS para piezas que soportan más temperatura. Si necesitas otro material, consúltanos. Más detalles en nuestra guía de materiales.
 
 ### ¿Cuánto se tarda en imprimir un pedido?
 
