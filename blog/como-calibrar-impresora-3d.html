@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>¿Por qué mis piezas salen mal? Cómo calibrar una impresora 3D | Tu Impresión en 3D</title>
-    <meta name="description" content="Guía paso a paso para calibrar tu impresora 3D: nivelación de la cama, primera capa y pasos de los ejes X, Y y Z para que tus piezas salgan perfectas.">
+    <meta name="description" content="El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.">
     <link rel="canonical" href="https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#0b0e13">
@@ -14,9 +14,9 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Tu Impresión en 3D">
     <meta property="og:title" content="¿Por qué mis piezas salen mal? Cómo calibrar una impresora 3D | Tu Impresión en 3D">
-    <meta property="og:description" content="Guía paso a paso para calibrar tu impresora 3D: nivelación de la cama, primera capa y pasos de los ejes X, Y y Z para que tus piezas salgan perfectas.">
+    <meta property="og:description" content="El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.">
     <meta property="og:url" content="https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html">
-    <meta property="og:image" content="https://www.tuimpresionen3d.com/assets/img/logo-150cm-primera-mitad.webp">
+    <meta property="og:image" content="https://www.tuimpresionen3d.com/assets/img/logo-150cm-despiece-60-piezas.webp">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -25,8 +25,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap">
     <link rel="stylesheet" href="/styles.css">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.tuimpresionen3d.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.tuimpresionen3d.com/blog/"},{"@type":"ListItem","position":3,"name":"¿Por qué mis piezas salen mal? Cómo calibrar una impresora 3D","item":"https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html"}]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Cómo calibrar una impresora 3D correctamente","description":"Guía paso a paso para calibrar tu impresora 3D: nivelación de la cama, primera capa y pasos de los ejes X, Y y Z para que tus piezas salgan perfectas.","image":"https://www.tuimpresionen3d.com/assets/img/logo-150cm-primera-mitad.webp","datePublished":"2024-02-02","dateModified":"2024-02-02","inLanguage":"es-ES","author":{"@type":"Organization","name":"Tu Impresión en 3D","url":"https://www.tuimpresionen3d.com/"},"publisher":{"@id":"https://www.tuimpresionen3d.com/#negocio"},"mainEntityOfPage":"https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.tuimpresionen3d.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.tuimpresionen3d.com/blog/"},{"@type":"ListItem","position":3,"name":"Cómo calibrar una impresora 3D paso a paso","item":"https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Cómo calibrar una impresora 3D paso a paso (en el orden correcto)","description":"El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.","image":"https://www.tuimpresionen3d.com/assets/img/logo-150cm-despiece-60-piezas.webp","datePublished":"2024-02-02","dateModified":"2026-10-02","inLanguage":"es-ES","author":{"@type":"Organization","name":"Tu Impresión en 3D","url":"https://www.tuimpresionen3d.com/"},"publisher":{"@id":"https://www.tuimpresionen3d.com/#negocio"},"mainEntityOfPage":"https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿En qué orden se calibra una impresora 3D?","acceptedAnswer":{"@type":"Answer","text":"Primero la revisión mecánica, después nivelación de cama, primera capa (Z-offset), pasos del extrusor, temperatura, flujo, retracción y avance de presión, y por último las medidas de la pieza."}},{"@type":"Question","name":"¿Por qué mis piezas no se pegan a la cama?","acceptedAnswer":{"@type":"Answer","text":"Las causas más habituales son una cama mal nivelada, la boquilla demasiado alta, una superficie sucia (límpiala con alcohol isopropílico) o una temperatura de cama demasiado baja."}},{"@type":"Question","name":"¿Por qué mis piezas salen más grandes de lo que deberían?","acceptedAnswer":{"@type":"Answer","text":"Normalmente por exceso de flujo o por la contracción del material, no por los pasos de los ejes. Calibra el flujo y, si hace falta, ajusta la compensación de tamaño en el laminador."}}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY1S7E92S2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -65,56 +66,125 @@
 
         <section class="page-hero">
             <div class="container" style="max-width:840px">
-                <nav class="breadcrumbs" aria-label="Migas de pan"><ol><li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">¿Por qué mis piezas salen mal? Cómo calibrar una impresora 3D</li></ol></nav>
-                <h1>Cómo calibrar una impresora 3D correctamente</h1>
-                <p class="lead">Guía paso a paso para calibrar tu impresora 3D: nivelación de la cama, primera capa y pasos de los ejes X, Y y Z para que tus piezas salgan perfectas.</p>
-                <p class="article-meta">Por Tu Impresión en 3D · <time datetime="2024-02-02">2 de febrero de 2024</time></p>
+                <nav class="breadcrumbs" aria-label="Migas de pan"><ol><li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Cómo calibrar una impresora 3D paso a paso</li></ol></nav>
+                <span class="tag">Calibración</span>
+                <h1 style="margin-top:12px">Cómo calibrar una impresora 3D paso a paso (en el orden correcto)</h1>
+                <p class="lead">El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.</p>
+                <p class="article-meta">Por el equipo de Tu Impresión en 3D (Tarragona) · Actualizado el <time datetime="2026-10-02">2 de octubre de 2026</time> · 4 min de lectura</p>
             </div>
         </section>
         <section class="section" style="padding-top:48px">
             <article class="container prose">
+                <div class="summary">
+                    <h2 class="summary-title">En resumen</h2>
+                    <ul>
+                        <li>Calibra <strong>en orden</strong>: cada paso depende del anterior. Empezar por las medidas sin haber calibrado el extrusor lleva a corregir el problema equivocado.</li>
+                        <li>La mayoría de fallos se resuelven con tres cosas: <strong>cama nivelada, primera capa correcta y flujo bien ajustado</strong>.</li>
+                        <li>Si las piezas salen un poco más grandes o más pequeñas, casi nunca hay que tocar los pasos de los ejes X/Y: suele ser el flujo o la compensación de contracción.</li>
+                        <li>Recalibra cada vez que cambies de boquilla, de material o de marca de filamento.</li>
+                    </ul>
+                </div>
+                <nav class="toc" aria-label="Contenido del artículo">
+                    <strong>Contenido</strong>
+                    <ol><li><a href="#0-antes-de-empezar-revision-mecanica">Antes de empezar: revisión mecánica</a></li><li><a href="#1-nivelacion-de-la-cama">Nivelación de la cama</a></li><li><a href="#2-primera-capa-z-offset">Primera capa (Z-offset)</a></li><li><a href="#3-pasos-del-extrusor-e-steps">Pasos del extrusor (e-steps)</a></li><li><a href="#4-temperatura">Temperatura</a></li><li><a href="#5-flujo-multiplicador-de-extrusion">Flujo (multiplicador de extrusión)</a></li><li><a href="#6-retraccion-y-avance-de-presion">Retracción y avance de presión</a></li><li><a href="#7-medidas-de-la-pieza">Medidas de la pieza</a></li><li><a href="#consejos-extra">Consejos extra</a></li><li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li></ol>
+                </nav>
 
-                <p>Si tus impresiones no se pegan a la cama, salen con medidas incorrectas o con capas irregulares, lo más probable es que tu impresora necesite una calibración. Estos son los pasos que seguimos en nuestro taller.</p>
+                <p>Si tus impresiones no se pegan a la cama, tienen huecos, hilos, capas que se separan o medidas que no cuadran, el problema casi siempre es de calibración. Este es el orden que seguimos en nuestro taller cada vez que ponemos a punto una impresora.</p>
 
-                <h2>1. Nivelación de la cama de impresión</h2>
-                <p>La cama debe estar perfectamente nivelada para que la primera capa se adhiera correctamente.</p>
+                <h2 id="0-antes-de-empezar-revision-mecanica">0. Antes de empezar: revisión mecánica</h2>
+                <p>Ninguna calibración arregla un problema mecánico. Comprueba que:</p>
                 <ul>
-                    <li>Usa una galga, un papel o un calibrador para medir la distancia entre la boquilla y la cama en varios puntos.</li>
-                    <li>Ajusta los tornillos de nivelación hasta que la distancia sea la misma en todos los puntos.</li>
+                    <li>Las correas están tensas (suenan como una cuerda grave al pulsarlas, sin estar extremadamente rígidas).</li>
+                    <li>Las ruedas o rodamientos no tienen holgura: el cabezal y la cama no deben bailar al moverlos con la mano.</li>
+                    <li>Los tornillos del marco están apretados y la boquilla está limpia.</li>
                 </ul>
+
+                <h2 id="1-nivelacion-de-la-cama">1. Nivelación de la cama</h2>
+                <p>Con la cama y la boquilla <strong>a temperatura de impresión</strong> (el metal se dilata), lleva la boquilla a cada esquina y ajusta la altura hasta que un folio normal pase rozando con una ligera resistencia. Repite la vuelta dos veces, porque al ajustar una esquina se mueven las demás. Si tu impresora tiene nivelación automática, ejecútala con la cama caliente y guarda la malla.</p>
+
+                <h2 id="2-primera-capa-z-offset">2. Primera capa (Z-offset)</h2>
+                <p>Imprime un cuadrado o un patrón de primera capa de una sola capa y obsérvalo:</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Lo que ves</th><th>Causa</th><th>Solución</th></tr></thead>
+                        <tbody>
+                            <tr><td>Líneas redondas separadas, se despegan</td><td>Boquilla demasiado alta</td><td>Baja el Z-offset 0,02–0,05 mm</td></tr>
+                            <tr><td>Superficie rugosa, transparente o con crestas; la boquilla arrastra</td><td>Boquilla demasiado baja</td><td>Sube el Z-offset 0,02–0,05 mm</td></tr>
+                            <tr><td>Líneas ligeramente aplastadas que se unen formando una superficie lisa</td><td>Correcto</td><td>¡Listo!</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="3-pasos-del-extrusor-e-steps">3. Pasos del extrusor (e-steps)</h2>
+                <p>Comprueba que cuando la impresora pide 100 mm de filamento, empuja realmente 100 mm:</p>
+                <ol class="steps-inline">
+                    <li>Calienta el hotend a la temperatura de impresión.</li>
+                    <li>Marca el filamento a 120 mm de la entrada del extrusor.</li>
+                    <li>Extruye 100 mm a baja velocidad.</li>
+                    <li>Mide la distancia que queda hasta la marca. Si quedan 20 mm, está perfecto.</li>
+                    <li>Si no, calcula: <code>nuevos pasos = pasos actuales × 100 / mm realmente extruidos</code> y guarda el valor.</li>
+                </ol>
+                <p>Muchas impresoras modernas con extrusor directo vienen bien calibradas de fábrica; aun así, comprobarlo lleva cinco minutos.</p>
                 <div class="ad-slot">
                     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9463405593849277" data-ad-slot="9228660705"></ins>
                     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                 </div>
 
-                <h2>2. Calibración de la primera capa</h2>
-                <p>Imprime un modelo de prueba de primera capa. Si no se adhiere bien, o queda demasiado fina o gruesa, ajusta la altura de la cama (offset Z) o el flujo de filamento.</p>
+                <h2 id="4-temperatura">4. Temperatura</h2>
+                <p>Cada marca y color de filamento se comporta distinto. Imprime una <strong>torre de temperatura</strong> (un modelo que cambia la temperatura cada pocos milímetros) y elige el tramo con mejores puentes, menos hilos y buena adhesión entre capas. Como referencia: PLA 190–220 °C, PETG 230–250 °C, ABS 240–260 °C. Si las capas se separan con facilidad al doblar la pieza, sube la temperatura.</p>
 
-                <h2>3. Calibración del eje X</h2>
-                <p>Imprime un modelo de calibración del eje X y mide la pieza. Si las medidas no coinciden con el diseño, ajusta el valor de pasos por milímetro del eje X en el firmware.</p>
+                <h2 id="5-flujo-multiplicador-de-extrusion">5. Flujo (multiplicador de extrusión)</h2>
+                <p>Imprime un cubo hueco de una sola pared (modo jarrón) y mide el grosor de la pared con un calibre en varios puntos. Ajusta el flujo así: <code>nuevo flujo = flujo actual × ancho de línea configurado / grosor medido</code>. Muchos laminadores (OrcaSlicer, PrusaSlicer, Bambu Studio) incluyen sus propias pruebas de flujo, que son aún más cómodas.</p>
+                <p>Un flujo excesivo produce piezas más grandes de lo esperado, superficies con "granos" y agujeros más estrechos; uno escaso deja huecos entre líneas y capas superiores con agujeros.</p>
 
-                <h2>4. Calibración del eje Y</h2>
-                <p>Repite el proceso con el eje Y: imprime el modelo de prueba, mide y corrige los pasos por milímetro si es necesario.</p>
+                <h2 id="6-retraccion-y-avance-de-presion">6. Retracción y avance de presión</h2>
+                <p>Si aparecen hilos entre partes de la pieza, ajusta la retracción con una prueba de retracción. Valores orientativos: 0,5–2 mm con extrusor directo y 4–7 mm con extrusor Bowden. Si tu firmware lo permite, calibra también el <strong>pressure advance / linear advance</strong>: mejora mucho las esquinas y reduce los abultamientos.</p>
 
-                <h2>5. Calibración del eje Z</h2>
-                <p>Imprime un modelo de prueba del eje Z y mide su altura. Si no es la correcta, ajusta los pasos por milímetro del eje Z.</p>
+                <h2 id="7-medidas-de-la-pieza">7. Medidas de la pieza</h2>
+                <p>Ahora sí, imprime un cubo de calibración de 20 mm y mídelo. Si X e Y salen con una diferencia pequeña (por ejemplo, 20,1 mm), <strong>no toques los pasos de los ejes</strong>: en las impresoras con correas suelen ser correctos de fábrica y la diferencia viene del flujo o de la contracción del material. Ajusta la compensación de tamaño en el laminador. En el eje Z, comprueba que la altura total es correcta; si no, revisa la primera capa.</p>
+                <p>Recuerda que los agujeros suelen salir algo más pequeños de lo diseñado: si una pieza debe encajar, deja una holgura de 0,2–0,4 mm en el diseño.</p>
 
-                <h2>Consejos extra</h2>
+                <h2 id="consejos-extra">Consejos extra</h2>
                 <ul>
-                    <li>Calibra en un ambiente con temperatura y humedad estables.</li>
-                    <li>Antes de calibrar, comprueba que la impresora está bien montada y que todas las piezas están en buen estado.</li>
-                    <li>Repite la calibración de forma periódica para mantener la calidad de las impresiones.</li>
+                    <li><strong>Seca el filamento</strong> si cruje, hace burbujas o deja muchos hilos: la humedad arruina la calidad, sobre todo en PETG y TPU.</li>
+                    <li>Haz una <strong>calibración PID</strong> del hotend y de la cama si la temperatura oscila.</li>
+                    <li>Guarda un <strong>perfil por cada filamento</strong>: lo que funciona con un PLA de una marca no tiene por qué funcionar con otra.</li>
+                    <li>Calibra en un ambiente sin corrientes de aire y con temperatura estable.</li>
                 </ul>
                 <div class="ad-slot">
                     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-9463405593849277" data-ad-slot="5401381743"></ins>
                     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                 </div>
-                <div class="callout">
-                    <p><strong>¿Prefieres que lo imprimamos por ti?</strong> En Tu Impresión en 3D ofrecemos <a href="/">servicio de impresión 3D en Tarragona</a> con envíos a toda España. <a href="/#contacto">Pide presupuesto gratis</a>.</p>
+                <h2 id="preguntas-frecuentes">Preguntas frecuentes</h2>
+                <div class="faq">
+            <details>
+                <summary>¿En qué orden se calibra una impresora 3D?</summary>
+                <div><p>Primero la revisión mecánica, después nivelación de cama, primera capa (Z-offset), pasos del extrusor, temperatura, flujo, retracción y avance de presión, y por último las medidas de la pieza.</p></div>
+            </details>
+            <details>
+                <summary>¿Por qué mis piezas no se pegan a la cama?</summary>
+                <div><p>Las causas más habituales son una cama mal nivelada, la boquilla demasiado alta, una superficie sucia (límpiala con alcohol isopropílico) o una temperatura de cama demasiado baja.</p></div>
+            </details>
+            <details>
+                <summary>¿Por qué mis piezas salen más grandes de lo que deberían?</summary>
+                <div><p>Normalmente por exceso de flujo o por la contracción del material, no por los pasos de los ejes. Calibra el flujo y, si hace falta, ajusta la compensación de tamaño en el laminador.</p></div>
+            </details>
+        </div>
+                <div class="cta-inline">
+                    <h2>¿Tu pieza no sale ni calibrando?</h2>
+                    <p>Si necesitas una pieza ya y bien hecha, la imprimimos por ti. Presupuesto gratis.</p>
+                    <div class="btn-row">
+                        <a class="btn btn-whatsapp" href="https://wa.me/34644643895?text=Hola%2C%20he%20le%C3%ADdo%20vuestra%20gu%C3%ADa%20y%20quiero%20pedir%20presupuesto%20de%20impresi%C3%B3n%203D" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Escríbenos por WhatsApp</a>
+                        <a class="btn btn-primary" href="/#contacto">Pedir presupuesto</a>
+                    </div>
+                </div>
+                <div class="related">
+                    <strong>Te puede interesar</strong>
+                    <ul><li><a href="/blog/imprimir-mas-rapido-boquillas-grandes.html">Imprime más rápido con boquillas grandes</a></li><li><a href="/blog/que-material-elegir-pla-petg-abs.html">PLA, PETG o ABS: qué material elegir</a></li><li><a href="/blog/comprar-impresora-3d-o-encargar.html">¿Comprar una impresora 3D o encargar las piezas?</a></li></ul>
                 </div>
             </article>
             <nav class="article-nav" aria-label="Más artículos">
-                <a class="btn btn-ghost" href="/blog/mejores-impresoras-3d-para-empezar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> Mejores impresoras para empezar</a>
+                <a class="btn btn-ghost" href="/blog/imprimir-mas-rapido-boquillas-grandes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> Imprime más rápido</a>
                 <a class="btn btn-ghost" href="/blog/imprimir-mas-rapido-boquillas-grandes.html">Imprime más rápido <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
             </nav>
         </section>
