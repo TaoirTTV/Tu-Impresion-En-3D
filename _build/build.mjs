@@ -6,6 +6,7 @@ import {
 } from './lib.mjs';
 import { PRODUCTS, bySlug, fmt, priceLabel } from './products.mjs';
 import { ARTICLES } from './articles.mjs';
+import { LANDINGS, CA } from './landings.mjs';
 
 const pages = [];
 const add = (p, priority = '0.6', lastmod = TODAY) => pages.push({ ...p, priority, lastmod });
@@ -25,11 +26,13 @@ export const FAQ_HOME = [
     ['¿Cuánto se tarda en imprimir un pedido?',
         'Depende del tamaño y la cantidad. Una pieza pequeña puede imprimirse en pocas horas y los pedidos sencillos suelen estar listos en pocos días. Al darte el presupuesto te indicamos el plazo exacto; si tienes prisa, dínoslo.'],
     ['¿Hacéis envíos fuera de Tarragona?',
-        'Sí. Damos servicio en Tarragona, Reus, Salou, Cambrils, Vila-seca, Valls, Torredembarra, El Vendrell y todo el Camp de Tarragona, y enviamos a toda España. Los productos de nuestra tienda online tienen envío gratuito a la España peninsular.'],
+        'Sí. Damos servicio en Tarragona, <a href="/impresion-3d-reus.html">Reus</a>, <a href="/impresion-3d-salou.html">Salou</a>, <a href="/impresion-3d-cambrils.html">Cambrils</a>, Vila-seca, Valls, Torredembarra, El Vendrell y todo el Camp de Tarragona, y enviamos a toda España. Los productos de nuestra tienda online tienen envío gratuito a la España peninsular.'],
     ['¿Podéis imprimir piezas grandes?',
         'Sí. Las piezas que no caben en la impresora se dividen en partes que se imprimen por separado y se unen después. Por ejemplo, hicimos un logo de 150 cm de alto formado por 60 piezas para Scorpii Calisthenics.'],
     ['¿Trabajáis con empresas?',
         'Sí. Hacemos prototipos, piezas funcionales, utillaje, series cortas, logos corpóreos, trofeos y merchandising para empresas, clubes, academias y comercios.'],
+    ['¿Hacéis llaveros y merchandising personalizado en Tarragona?',
+        'Sí. Fabricamos <a href="/producto-llaveros-personalizados.html">llaveros personalizados</a> con tu logo o nombre, trofeos, imanes, expositores y regalos de empresa, desde una unidad hasta series para ferias y eventos. Mira todas las opciones en <a href="/merchandising-personalizado-tarragona.html">merchandising personalizado</a>.'],
 ];
 
 // ======================================================================
@@ -42,7 +45,7 @@ export const FAQ_HOME = [
         [icon.zap, 'Prototipado rápido', 'Valida tu producto antes de fabricarlo: prototipos funcionales y series cortas en poco tiempo.', '/info.html#prototipos'],
         [icon.wrench, 'Piezas de repuesto', '¿Se ha roto una pieza que ya no venden? La replicamos o la mejoramos para que vuelva a funcionar.', '/info.html#repuestos'],
         [icon.type, 'Logos, letras y rótulos', 'Logos corpóreos y letras 3D para locales, gimnasios y eventos, incluso de más de un metro y retroiluminados.', '/producto-logo-imagen.html'],
-        [icon.gift, 'Regalos personalizados', 'Trofeos, llaveros, porta alianzas, fotos en relieve y detalles únicos para bodas, eventos y empresas.', '/tienda.html'],
+        [icon.gift, 'Merchandising y llaveros', 'Llaveros con logo, trofeos y regalos de empresa para negocios, clubes y eventos, desde 1 unidad.', '/merchandising-personalizado-tarragona.html'],
     ];
     const works = [
         ['/Projects/Logo-150cm-impreso-en-3d.html', 'logo-retroiluminado-impreso-3d', 'Logo retroiluminado de 150 cm impreso en 3D', 'Proyecto', 'Logo de 150 cm para un gimnasio', '60 piezas impresas, estructura de madera y retroiluminación LED.'],
@@ -64,7 +67,7 @@ export const FAQ_HOME = [
                 <div class="hero-content">
                     <span class="eyebrow">${icon.pin.replace('<svg', '<svg width="16" height="16"')} Tarragona · Envíos a toda España</span>
                     <h1>Impresión 3D en <span class="hl">Tarragona</span></h1>
-                    <p class="lead">Convertimos tus ideas en piezas reales: prototipos, piezas de repuesto, logos, trofeos y regalos personalizados impresos en 3D. Diseño 3D incluido si no tienes el archivo.</p>
+                    <p class="lead">Convertimos tus ideas en piezas reales: prototipos, piezas de repuesto, logos, trofeos, llaveros, merchandising y regalos personalizados impresos en 3D. Diseño 3D incluido si no tienes el archivo.</p>
                     <div class="btn-row">
                         <a class="btn btn-primary" href="#contacto">Pedir presupuesto gratis</a>
                         <a class="btn btn-ghost" href="${wa()}" target="_blank" rel="noopener">${icon.whatsapp} WhatsApp</a>
@@ -178,7 +181,10 @@ export const FAQ_HOME = [
                     <h2>Impresión 3D en Tarragona, Reus y todo el Camp de Tarragona</h2>
                     <p class="text-muted">Estamos en Tarragona y trabajamos con clientes de toda la provincia. Si no eres de la zona, no pasa nada: enviamos tus piezas a cualquier punto de España.</p>
                     <ul class="chips mt-2">
-                        ${AREAS.map((a) => `<li>${a}</li>`).join('')}
+                        ${AREAS.map((a) => {
+                            const page = LANDINGS.find((l) => l.city === a);
+                            return `<li>${page ? `<a href="/${page.slug}.html">${a}</a>` : a}</li>`;
+                        }).join('')}
                         <li>Toda España</li>
                     </ul>
                 </div>
@@ -215,8 +221,9 @@ ${contactSection()}`;
         file: 'index.html',
         url: '/',
         active: '/',
-        title: 'Impresión 3D en Tarragona | Piezas, prototipos y diseño 3D a medida',
-        description: 'Servicio de impresión 3D en Tarragona: imprimimos tus piezas, prototipos, repuestos, logos y regalos personalizados. Diseño 3D incluido. Presupuesto gratis por WhatsApp. Envíos a toda España.',
+        title: 'Impresión 3D en Tarragona | Piezas a medida, llaveros y merchandising',
+        description: 'Servicio de impresión 3D en Tarragona: piezas a medida, prototipos, repuestos, logos 3D, llaveros personalizados, trofeos y merchandising. Diseño 3D incluido. Presupuesto gratis por WhatsApp.',
+        alternates: { es: '/', ca: '/ca/' },
         jsonld: [businessLd, websiteLd, faqLd(FAQ_HOME)],
         preload: '\n    <link rel="preload" as="image" href="/assets/img/mascara-impresa-3d-taller-tarragona-sm.webp" imagesrcset="/assets/img/mascara-impresa-3d-taller-tarragona-sm.webp 960w, /assets/img/mascara-impresa-3d-taller-tarragona.webp 1920w" imagesizes="100vw" fetchpriority="high">',
         body,
@@ -401,7 +408,7 @@ const productCard = (p, sizes = '(max-width: 640px) 100vw, (max-width: 1000px) 5
         file: 'tienda.html',
         url: '/tienda.html',
         active: '/tienda.html',
-        title: 'Tienda de regalos impresos en 3D personalizados | Tu Impresión en 3D',
+        title: 'Regalos personalizados impresos en 3D | Tienda online desde Tarragona',
         description: 'Regalos y productos personalizados impresos en 3D en Tarragona: escudos con nombre, porta alianzas, fotos en relieve, trofeos, llaveros y antiestrés. Envío gratis a la España peninsular.',
         jsonld: [
             breadcrumbLd([['Inicio', '/'], ['Tienda', '/tienda.html']]),
@@ -491,7 +498,18 @@ ${actions}
                     </div>
                 </div>
             </div>
-        </section>
+        </section>${p.content ? `
+        <section class="section section-alt">
+            <div class="container prose">
+${p.content}
+            </div>
+        </section>` : ''}${p.faqs ? `
+        <section class="section">
+            <div class="container">
+                <div class="section-head center"><h2>Preguntas frecuentes</h2></div>
+                ${faqHtml(p.faqs)}
+            </div>
+        </section>` : ''}
         <section class="section section-alt">
             <div class="container">
                 <div class="section-head"><h2>Productos que quizás te interesen</h2></div>
@@ -503,6 +521,20 @@ ${actions}
 ${ctaBand('¿Lo quieres a tu manera?', 'Personalizamos cualquier producto: tamaño, colores, textos o un diseño totalmente nuevo.')}`;
 
     const jsonld = [breadcrumbLd(crumbs)];
+    if (p.faqs) jsonld.push(faqLd(p.faqs));
+    if (p.price == null) {
+        jsonld.push({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: p.name,
+            serviceType: p.category,
+            description: p.description,
+            image: p.images.map(([n]) => `${SITE}/assets/img/${n}.webp`),
+            provider: { '@id': BUSINESS_ID },
+            areaServed: [{ '@type': 'City', name: 'Tarragona' }, { '@type': 'AdministrativeArea', name: 'Provincia de Tarragona' }, { '@type': 'Country', name: 'España' }],
+            url: `${SITE}${url}`,
+        });
+    }
     if (p.price != null) {
         const offerBase = {
             '@type': 'Offer',
@@ -535,8 +567,8 @@ ${ctaBand('¿Lo quieres a tu manera?', 'Personalizamos cualquier producto: tama�
         file: `${p.slug}.html`,
         url,
         active: '/tienda.html',
-        title: `${p.name} impreso en 3D | ${p.price != null ? fmt(p.price) + ' | ' : ''}Tu Impresión en 3D`.replace('impreso en 3D impreso', 'impreso').replace(/ en 3D impreso en 3D/, ' en 3D'),
-        description: `${p.short} ${p.price != null ? `Precio: ${priceLabel(p)}. Envío gratis a la España peninsular.` : 'Pide presupuesto sin compromiso.'} Hecho en Tarragona.`,
+        title: p.seoTitle || `${p.name}${/en 3D/.test(p.name) ? '' : ' en 3D'} | ${p.price != null ? fmt(p.price) + ' | ' : ''}Tu Impresión en 3D`,
+        description: p.seoDescription || `${p.short} ${p.price != null ? `Precio: ${priceLabel(p)}. Envío gratis a la España peninsular.` : 'Pide presupuesto sin compromiso.'} Hecho en Tarragona.`,
         ogType: 'product',
         ogImage: `/assets/img/${p.images[0][0]}.webp`,
         jsonld,
@@ -901,6 +933,236 @@ layout({
 });
 
 // ======================================================================
+// LANDINGS (merchandising y municipios)
+// ======================================================================
+for (const l of LANDINGS) {
+    const url = `/${l.slug}.html`;
+    const crumbs = [['Inicio', '/'], [l.crumb, url]];
+    const where = l.city || 'Tarragona';
+    const body = `
+        <section class="page-hero">
+            <div class="container">
+                ${breadcrumbs(crumbs)}
+                <h1>${l.h1}</h1>
+                <p class="lead">${l.lead}</p>
+                <div class="btn-row mt-2">
+                    <a class="btn btn-primary" href="#contacto">Pedir presupuesto gratis</a>
+                    <a class="btn btn-ghost" href="${wa(l.waText)}" target="_blank" rel="noopener">${icon.whatsapp} WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container split">
+                <div>
+                    <h2>${l.intro.heading}</h2>
+                    <p class="text-muted">${l.intro.text}</p>
+                    <ul class="check-list">
+                        ${l.intro.points.map((x) => `<li>${x}</li>`).join('\n                        ')}
+                    </ul>
+                </div>
+                <div class="split-media" style="max-width:480px;justify-self:center">
+                    ${img(l.intro.image[0], l.intro.image[1], { sizes: '(max-width: 860px) 100vw, 45vw', eager: true })}
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <h2>${l.cardsHeading}</h2>
+                    ${l.cardsLead ? `<p>${l.cardsLead}</p>` : ''}
+                </div>
+                <div class="grid grid-3">
+                    ${l.cards.map(([ic, t, d, href]) => `
+                    <article class="card">
+                        <div class="icon">${icon[ic]}</div>
+                        <h3>${href ? `<a href="${href}" style="color:inherit;text-decoration:none">${t}</a>` : t}</h3>
+                        <p>${d}</p>
+                    </article>`).join('')}
+                </div>
+            </div>
+        </section>
+${l.works ? `
+        <section class="section">
+            <div class="container">
+                <div class="section-head"><h2>Trabajos reales</h2><p>Piezas que hemos diseñado e impreso en nuestro taller de Tarragona.</p></div>
+                <div class="grid grid-4">
+                    ${l.works.map(([href, im, alt, t]) => `
+                    <a class="media-card" href="${href}">
+                        <div class="media">${img(im, alt, { sizes: '(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 25vw' })}</div>
+                        <div class="body"><h3>${t}</h3></div>
+                    </a>`).join('')}
+                </div>
+            </div>
+        </section>` : ''}${l.audience ? `
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head"><h2>${l.audience.heading}</h2></div>
+                <div class="grid grid-4">
+                    ${l.audience.items.map(([t, d]) => `<article class="card"><h3>${t}</h3><p>${d}</p></article>`).join('')}
+                </div>
+            </div>
+        </section>` : ''}
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head center">
+                    <h2>Cómo encargarlo${l.city ? ` desde ${l.city}` : ''}</h2>
+                </div>
+                <ol class="steps grid grid-4">
+                    <li><h3>Escríbenos</h3><p>Por WhatsApp, email o el formulario: fotos, logo, archivo 3D o una idea.</p></li>
+                    <li><h3>Diseño y precio</h3><p>Te enviamos la propuesta, el precio cerrado y el plazo. Sin compromiso.</p></li>
+                    <li><h3>Fabricación</h3><p>Imprimimos en nuestro taller de Tarragona y revisamos cada pieza.</p></li>
+                    <li><h3>Entrega</h3><p>Entrega acordada en ${where} o envío a cualquier punto de España.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head center"><h2>Preguntas frecuentes${l.city ? ` sobre impresión 3D en ${l.city}` : ''}</h2></div>
+                ${faqHtml(l.faqs)}
+                <p class="mt-2" style="text-align:center">${(l.related || [['Servicios de impresión 3D', '/info.html'], ['Merchandising personalizado', '/merchandising-personalizado-tarragona.html'], ['Tienda de regalos 3D', '/tienda.html'], ['Precios de impresión 3D', '/blog/cuanto-cuesta-imprimir-en-3d.html']])
+                    .filter(([, href]) => href !== url).map(([t, href]) => `<a href="${href}">${t}</a>`).join(' · ')}</p>
+            </div>
+        </section>
+${contactSection({ heading: `Pide presupuesto${l.city ? ` desde ${l.city}` : ''}`, subject: `Solicitud desde la web: ${l.crumb}` })}`;
+
+    add(layout({
+        file: `${l.slug}.html`,
+        url,
+        active: l.active || '',
+        title: l.title,
+        description: l.description,
+        ogImage: `/assets/img/${l.intro.image[0]}.webp`,
+        jsonld: [
+            {
+                '@context': 'https://schema.org',
+                '@type': 'Service',
+                name: l.h1,
+                serviceType: l.serviceType,
+                description: l.description,
+                provider: { '@id': BUSINESS_ID },
+                areaServed: l.city
+                    ? { '@type': 'City', name: l.city }
+                    : [{ '@type': 'City', name: 'Tarragona' }, { '@type': 'AdministrativeArea', name: 'Provincia de Tarragona' }, { '@type': 'Country', name: 'España' }],
+                url: `${SITE}${url}`,
+            },
+            breadcrumbLd(crumbs),
+            faqLd(l.faqs),
+        ],
+        body,
+    }), l.priority);
+}
+
+// ======================================================================
+// PORTADA EN CATALÁN (/ca/)
+// ======================================================================
+{
+    const body = `
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">${icon.pin.replace('<svg', '<svg width="16" height="16"')} Tarragona · Enviaments a tot Espanya</span>
+                <h1>${CA.h1}</h1>
+                <p class="lead">${CA.lead}</p>
+                <div class="btn-row mt-2">
+                    <a class="btn btn-primary" href="#contacte">Demana pressupost gratuït</a>
+                    <a class="btn btn-ghost" href="${wa('Hola, vull pressupost d’impressió 3D')}" target="_blank" rel="noopener">${icon.whatsapp} WhatsApp</a>
+                </div>
+                <p class="mt-2"><a href="/" hreflang="es" lang="es">Versión en castellano</a></p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Servei d'impressió 3D a Tarragona per a particulars i empreses</h2>
+                    <p>Som un taller d'impressió 3D a Tarragona. Imprimim els teus arxius, dissenyem peces a mida i fabriquem productes personalitzats en PLA, PETG i ABS, en molts colors.</p>
+                </div>
+                <div class="grid grid-3">
+                    ${CA.services.map(([ic, t, d]) => `
+                    <article class="card">
+                        <div class="icon">${icon[ic]}</div>
+                        <h3>${t}</h3>
+                        <p>${d}</p>
+                    </article>`).join('')}
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container split">
+                <div>
+                    <h2>Clauers personalitzats i marxandatge amb el teu logo</h2>
+                    <p class="text-muted">Fabriquem clauers amb la forma del teu logo, trofeus per a clubs i torneigs, imants, expositors i regals d'empresa. Des d'una unitat fins a sèries per a fires, casaments i esdeveniments.</p>
+                    <p><a href="/merchandising-personalizado-tarragona.html" hreflang="es">Veure el marxandatge (en castellà)</a> · <a href="/producto-llaveros-personalizados.html" hreflang="es">Clauers personalitzats</a></p>
+                </div>
+                <div class="split-media" style="max-width:420px;justify-self:center">
+                    ${img('llaveros-personalizados-3d', 'Clauers personalitzats impresos en 3D a Tarragona', { sizes: '(max-width: 860px) 100vw, 45vw' })}
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Impressió 3D a Tarragona, Reus i tot el Camp de Tarragona</h2>
+                    <p>Som a Tarragona i treballem amb clients de tota la província. Si no ets de la zona, t'enviem les peces a qualsevol punt d'Espanya.</p>
+                </div>
+                <ul class="chips">
+                    ${AREAS.map((a) => `<li>${a}</li>`).join('')}
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head center"><h2>Preguntes freqüents</h2></div>
+                ${faqHtml(CA.faqs)}
+            </div>
+        </section>
+
+        <section class="section" id="contacte">
+            <div class="container">
+                <div class="cta-band">
+                    <div>
+                        <h2>Demana el teu pressupost d'impressió 3D</h2>
+                        <p>Explica'ns què necessites (mides, quantitat, ús de la peça) i envia'ns l'arxiu, una foto o un esbós. Et responem amb preu i termini sense compromís.</p>
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn btn-whatsapp" href="${wa('Hola, vull pressupost d’impressió 3D')}" target="_blank" rel="noopener">${icon.whatsapp} WhatsApp</a>
+                        <a class="btn btn-primary" href="mailto:${EMAIL}">${icon.mail} ${EMAIL}</a>
+                        <a class="btn btn-ghost" href="tel:${TEL}">${icon.phone} ${PHONE}</a>
+                    </div>
+                </div>
+            </div>
+        </section>`;
+    add(layout({
+        file: 'ca/index.html',
+        url: '/ca/',
+        active: '/ca/',
+        lang: 'ca',
+        alternates: { es: '/', ca: '/ca/' },
+        title: CA.title,
+        description: CA.description,
+        jsonld: [
+            {
+                '@context': 'https://schema.org',
+                '@type': 'WebPage',
+                name: CA.title,
+                inLanguage: 'ca',
+                url: `${SITE}/ca/`,
+                about: { '@id': BUSINESS_ID },
+                isPartOf: { '@id': `${SITE}/#web` },
+            },
+            faqLd(CA.faqs),
+        ],
+        body,
+    }), '0.8');
+}
+
+// ======================================================================
 // Redirecciones de páginas antiguas
 // ======================================================================
 redirectPage('shop.html', '/tienda.html', 'Tienda | Tu Impresión en 3D');
@@ -960,6 +1222,15 @@ fs.writeFileSync(
 - [Piezas de repuesto](${SITE}/info.html#repuestos): réplica y mejora de piezas rotas o descatalogadas.
 - [Logos, letras y rótulos 3D](${SITE}/producto-logo-imagen.html): incluidos grandes formatos (más de 1 m) y retroiluminados.
 - [Trofeos personalizados](${SITE}/producto-trofeos-personalizados.html): para clubes, torneos, eventos y empresas.
+- [Merchandising personalizado](${SITE}/merchandising-personalizado-tarragona.html): llaveros con logo, trofeos, imanes, expositores y regalos de empresa, desde 1 unidad.
+- [Llaveros personalizados](${SITE}/producto-llaveros-personalizados.html): con logo, nombre o diseño, por unidades o en cantidad.
+
+## Zonas
+
+- [Impresión 3D en Reus](${SITE}/impresion-3d-reus.html)
+- [Impresión 3D en Salou](${SITE}/impresion-3d-salou.html)
+- [Impresión 3D en Cambrils](${SITE}/impresion-3d-cambrils.html)
+- [Impressió 3D a Tarragona (català)](${SITE}/ca/)
 
 ## Tienda (envío gratis a la España peninsular)
 
