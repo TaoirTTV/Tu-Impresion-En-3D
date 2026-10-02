@@ -396,7 +396,39 @@ ol {
 }
 
 .hero-content {
+        max-width: 560px;
+    }
+}
+
+.hero-content {
     max-width: 680px;
+}
+
+@media (min-width: 1000px) {
+    .hero-bg {
+        left: 32%;
+        -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 22%);
+        mask-image: linear-gradient(90deg, transparent 0%, #000 22%);
+    }
+
+    .hero-bg img {
+        object-position: 70% center;
+    }
+
+    .hero::after {
+        background:
+            linear-gradient(90deg, rgba(11, 14, 19, 1) 0%, rgba(11, 14, 19, 0.85) 30%, rgba(11, 14, 19, 0) 55%),
+            linear-gradient(0deg, var(--bg) 0%, rgba(11, 14, 19, 0) 25%);
+    }
+
+    @media (min-width: 1000px) and (max-width: 1199px) {
+    .hero-bg {
+        left: 42%;
+    }
+
+    .hero-content {
+        max-width: 480px;
+    }
 }
 
 .eyebrow {
