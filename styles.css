@@ -2,6 +2,45 @@
    Tu Impresión en 3D — hoja de estilos global
    ========================================================================== */
 
+/* Fuentes alojadas en el propio dominio (Inter y Space Grotesk, SIL Open Font License)
+   para no enviar la IP de los visitantes a los servidores de Google Fonts. */
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/assets/fonts/inter-latin-ext.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/assets/fonts/inter-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 600 700;
+    font-display: swap;
+    src: url("/assets/fonts/space-grotesk-latin-ext.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 600 700;
+    font-display: swap;
+    src: url("/assets/fonts/space-grotesk-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
     --bg: #0b0e13;
     --bg-alt: #10151c;
@@ -1448,4 +1487,220 @@ td strong {
         transition: none !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* ---------- Enlaces legales del pie ---------- */
+
+.legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+}
+
+.link-button {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.site-footer .link-button:hover {
+    color: var(--accent);
+}
+
+/* ---------- Aviso de cookies ---------- */
+
+.cookie-banner {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 120;
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    padding: 22px 24px;
+    color: var(--text);
+    font-size: 0.95rem;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+}
+
+.cookie-banner[hidden] {
+    display: none;
+}
+
+.cookie-banner h2 {
+    font-size: 1.15rem;
+    margin: 0 0 8px;
+}
+
+.cookie-banner h2:focus {
+    outline: none;
+}
+
+.cookie-banner p {
+    margin: 0 0 16px;
+    color: var(--text-muted);
+}
+
+.cookie-banner a {
+    color: var(--accent);
+}
+
+.cookie-prefs {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.cookie-prefs[hidden] {
+    display: none;
+}
+
+.cookie-opt {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-alt);
+    cursor: pointer;
+}
+
+.cookie-opt input {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    flex: none;
+}
+
+.cookie-opt strong {
+    display: block;
+    color: var(--text);
+}
+
+.cookie-opt span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.cookie-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cookie-actions .btn {
+    flex: 1 1 160px;
+    padding: 12px 18px;
+}
+
+.cookie-actions .btn[hidden] {
+    display: none;
+}
+
+/* ---------- Casilla de privacidad del formulario ---------- */
+
+.form .check {
+    font-weight: 400;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.form .check input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    flex: none;
+    accent-color: var(--accent);
+}
+
+.form-legal {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.form-legal a,
+.form .check a {
+    color: var(--accent);
+}
+
+/* ---------- Vídeo de YouTube con carga bajo demanda ---------- */
+
+.video-consent {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 14px;
+    padding: 20px;
+    text-align: center;
+    background: #000 center / cover no-repeat;
+    color: #fff;
+}
+
+.video-consent::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.video-consent > * {
+    position: relative;
+}
+
+.video-consent p {
+    margin: 0;
+    max-width: 520px;
+    font-size: 0.9rem;
+}
+
+.video-consent a {
+    color: var(--accent);
+}
+
+/* ---------- Tablas en páginas legales ---------- */
+
+.prose .table-wrap {
+    overflow-x: auto;
+    margin: 1em 0 1.5em;
+}
+
+.prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.prose th,
+.prose td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.prose th {
+    background: var(--surface);
+}
+
+.legal-note {
+    border: 1px dashed var(--accent);
+    border-radius: var(--radius);
+    padding: 12px 16px;
 }

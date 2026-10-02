@@ -55,6 +55,18 @@
         update();
     });
 
+    // Vídeos de YouTube: el reproductor solo se carga cuando el usuario lo pide
+    document.querySelectorAll('[data-youtube]').forEach(function (box) {
+        box.querySelector('button').addEventListener('click', function () {
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + box.getAttribute('data-youtube') + '?autoplay=1';
+            iframe.title = box.getAttribute('data-title');
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.allowFullscreen = true;
+            box.replaceWith(iframe);
+        });
+    });
+
     // Año actual en el pie
     var year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
