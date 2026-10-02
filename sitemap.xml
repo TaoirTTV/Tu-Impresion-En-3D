@@ -1,57 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://tuimpresionen3d.com/</loc>
-        <lastmod>2024-06-02</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://www.tuimpresionen3d.com/</loc>
+        <lastmod>2026-10-02</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://tuimpresionen3d.com/index.html</loc>
-        <lastmod>2024-06-02</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://www.tuimpresionen3d.com/info.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/tienda.html</loc>
+        <lastmod>2026-10-02</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://tuimpresionen3d.com/info.html</loc>
-        <lastmod>2024-06-02</lastmod>
-        <changefreq>monthly</changefreq>
+        <loc>https://www.tuimpresionen3d.com/producto-escudos-personalizados.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-porta-alianzas.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-fotos-impresas.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-trofeos-personalizados.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-logo-imagen.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-llaveros-personalizados.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-llaveros-spotify.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-nike-jordan.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-cono-antiestres.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-bola-antiestres.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/producto-pack-antiestres.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/Projects/</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/Projects/Logo-150cm-impreso-en-3d.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/blog/</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/blog/cuanto-cuesta-imprimir-en-3d.html</loc>
+        <lastmod>2026-10-02</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://tuimpresionen3d.com/shop.html</loc>
-        <lastmod>2024-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://tuimpresionen3d.com/blog/index.html</loc>
-        <lastmod>2024-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://tuimpresionen3d.com/blog/MejoresImpresoras2024.html</loc>
-        <lastmod>2024-06-02</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://www.tuimpresionen3d.com/blog/imprimir-mas-rapido-boquillas-grandes.html</loc>
+        <lastmod>2024-02-21</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://tuimpresionen3d.com/blog/comoCalibrarTuImpresora3D.html</loc>
-        <lastmod>2024-06-02</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html</loc>
+        <lastmod>2024-02-02</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://tuimpresionen3d.com/projects/index.html</loc>
-        <lastmod>2024-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <loc>https://www.tuimpresionen3d.com/blog/mejores-impresoras-3d-para-empezar.html</loc>
+        <lastmod>2024-02-02</lastmod>
+        <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://tuimpresionen3d.com/Projects/Logo-150cm-impreso-en-3d.html</loc>
-        <lastmod>2024-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <loc>https://www.tuimpresionen3d.com/blog/merece-la-pena-comprar-impresora-3d.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.tuimpresionen3d.com/privacidad.html</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.2</priority>
     </url>
 </urlset>

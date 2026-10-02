@@ -1,7 +1,33 @@
-User-agent: //
+# Tu Impresión en 3D — impresión 3D en Tarragona
+User-agent: *
+Allow: /
 
-Disallow: /contactType.html
-Disallow: /Sorteos.html
+# Asistentes y buscadores de IA: bienvenidos
+User-agent: GPTBot
+Allow: /
 
-# Allow the sitemap
-Allow: /sitemap.xml
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://www.tuimpresionen3d.com/sitemap.xml
