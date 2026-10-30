@@ -129,7 +129,7 @@ export const FAQ_HOME = [
             <div class="container">
                 <div class="section-head">
                     <span class="kicker">Trabajos realizados</span>
-                    <h2>Algunas piezas que hemos impreso en 3D</h2>
+                    <h2>Impresión 3D personalizada: algunas piezas que hemos hecho</h2>
                     <p>Cada proyecto es diferente. Estos son algunos ejemplos reales salidos de nuestras impresoras en Tarragona.</p>
                 </div>
                 <div class="grid grid-4">
@@ -283,7 +283,7 @@ ${contactSection()}`;
         <section class="section" id="impresion">
             <div class="container split">
                 <div>
-                    <h2>Impresión 3D bajo pedido</h2>
+                    <h2>Impresión 3D personalizada y bajo pedido</h2>
                     <p class="text-muted">Diseñamos y fabricamos objetos tridimensionales a medida con tecnología de impresión 3D FDM (modelado por deposición fundida). Envíanos tu modelo y lo imprimimos con el material, color, resistencia y acabado que necesites, desde una sola unidad.</p>
                     <ul class="check-list">
                         <li>Archivos STL, 3MF, OBJ y STEP.</li>

@@ -18,7 +18,7 @@ export const SOCIAL = {
     youtube: 'https://www.youtube.com/channel/UCesfxiDwZDbtwG2S4edzpUQ',
 };
 export const OG_DEFAULT = '/assets/img/og-impresion-3d-tarragona.jpg';
-export const TODAY = '2026-10-02';
+export const TODAY = '2026-10-30';
 
 // ---------- Iconos (SVG inline) ----------
 const s = (inner) =>
