@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>¿Por qué mis piezas salen mal? Cómo calibrar una impresora 3D | Tu Impresión en 3D</title>
-    <meta name="description" content="El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.">
+    <title>¿Piezas que salen mal? Cómo calibrar tu impresora 3D</title>
+    <meta name="description" content="El orden de calibración que usamos en el taller: nivelación, primera capa, e-steps, temperatura, flujo, retracción y medidas, con valores de referencia.">
     <link rel="canonical" href="https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#0b0e13">
@@ -13,14 +13,14 @@
     <meta property="og:locale" content="es_ES">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Tu Impresión en 3D">
-    <meta property="og:title" content="¿Por qué mis piezas salen mal? Cómo calibrar una impresora 3D | Tu Impresión en 3D">
-    <meta property="og:description" content="El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.">
+    <meta property="og:title" content="¿Piezas que salen mal? Cómo calibrar tu impresora 3D">
+    <meta property="og:description" content="El orden de calibración que usamos en el taller: nivelación, primera capa, e-steps, temperatura, flujo, retracción y medidas, con valores de referencia.">
     <meta property="og:url" content="https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html">
     <meta property="og:image" content="https://www.tuimpresionen3d.com/assets/img/logo-150cm-despiece-60-piezas.webp">
-    <meta property="og:image:alt" content="¿Por qué mis piezas salen mal? Cómo calibrar una impresora 3D | Tu Impresión en 3D">
+    <meta property="og:image:alt" content="¿Piezas que salen mal? Cómo calibrar tu impresora 3D">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="¿Por qué mis piezas salen mal? Cómo calibrar una impresora 3D | Tu Impresión en 3D">
-    <meta name="twitter:description" content="El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.">
+    <meta name="twitter:title" content="¿Piezas que salen mal? Cómo calibrar tu impresora 3D">
+    <meta name="twitter:description" content="El orden de calibración que usamos en el taller: nivelación, primera capa, e-steps, temperatura, flujo, retracción y medidas, con valores de referencia.">
     <meta name="twitter:image" content="https://www.tuimpresionen3d.com/assets/img/logo-150cm-despiece-60-piezas.webp">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap">
     <link rel="stylesheet" href="/styles.css">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.tuimpresionen3d.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.tuimpresionen3d.com/blog/"},{"@type":"ListItem","position":3,"name":"Cómo calibrar una impresora 3D paso a paso","item":"https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html"}]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Cómo calibrar una impresora 3D paso a paso (en el orden correcto)","description":"El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.","image":"https://www.tuimpresionen3d.com/assets/img/logo-150cm-despiece-60-piezas.webp","datePublished":"2024-02-02","dateModified":"2026-10-02","inLanguage":"es-ES","author":{"@type":"Organization","name":"Tu Impresión en 3D","url":"https://www.tuimpresionen3d.com/"},"publisher":{"@id":"https://www.tuimpresionen3d.com/#negocio"},"mainEntityOfPage":"https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Cómo calibrar una impresora 3D paso a paso (en el orden correcto)","description":"El orden de calibración que usamos en el taller: nivelación, primera capa, e-steps, temperatura, flujo, retracción y medidas, con valores de referencia.","image":"https://www.tuimpresionen3d.com/assets/img/logo-150cm-despiece-60-piezas.webp","datePublished":"2024-02-02","dateModified":"2026-10-02","inLanguage":"es-ES","author":{"@type":"Organization","name":"Tu Impresión en 3D","url":"https://www.tuimpresionen3d.com/"},"publisher":{"@id":"https://www.tuimpresionen3d.com/#negocio"},"mainEntityOfPage":"https://www.tuimpresionen3d.com/blog/como-calibrar-impresora-3d.html"}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿En qué orden se calibra una impresora 3D?","acceptedAnswer":{"@type":"Answer","text":"Primero la revisión mecánica, después nivelación de cama, primera capa (Z-offset), pasos del extrusor, temperatura, flujo, retracción y avance de presión, y por último las medidas de la pieza."}},{"@type":"Question","name":"¿Por qué mis piezas no se pegan a la cama?","acceptedAnswer":{"@type":"Answer","text":"Las causas más habituales son una cama mal nivelada, la boquilla demasiado alta, una superficie sucia (límpiala con alcohol isopropílico) o una temperatura de cama demasiado baja."}},{"@type":"Question","name":"¿Por qué mis piezas salen más grandes de lo que deberían?","acceptedAnswer":{"@type":"Answer","text":"Normalmente por exceso de flujo o por la contracción del material, no por los pasos de los ejes. Calibra el flujo y, si hace falta, ajusta la compensación de tamaño en el laminador."}}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY1S7E92S2"></script>
     <script>
@@ -74,7 +74,7 @@
                 <nav class="breadcrumbs" aria-label="Migas de pan"><ol><li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Cómo calibrar una impresora 3D paso a paso</li></ol></nav>
                 <span class="tag">Calibración</span>
                 <h1 style="margin-top:12px">Cómo calibrar una impresora 3D paso a paso (en el orden correcto)</h1>
-                <p class="lead">El orden de calibración que usamos en el taller: nivelación, primera capa, extrusor (e-steps), temperatura, flujo, retracción y medidas. Con valores de referencia y cómo detectar cada problema.</p>
+                <p class="lead">El orden de calibración que usamos en el taller: nivelación, primera capa, e-steps, temperatura, flujo, retracción y medidas, con valores de referencia.</p>
                 <p class="article-meta">Por el equipo de Tu Impresión en 3D (Tarragona) · Actualizado el <time datetime="2026-10-02">2 de octubre de 2026</time> · 4 min de lectura</p>
             </div>
         </section>

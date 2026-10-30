@@ -87,7 +87,7 @@ export const PRODUCTS = [
         related: ['producto-logo-imagen', 'producto-escudos-personalizados', 'producto-llaveros-personalizados'],
         guide: ['Guía: cómo pedir trofeos personalizados para tu club o evento', '/blog/trofeos-personalizados-impresos-en-3d.html'],
         seoTitle: 'Trofeos personalizados en Tarragona | Impresos en 3D con tu logo',
-        seoDescription: 'Trofeos personalizados impresos en 3D en Tarragona para clubes, torneos, academias y eventos de empresa. Con tu logo, colores y texto. Unidades sueltas o series. Presupuesto gratis.',
+        seoDescription: 'Trofeos personalizados impresos en 3D en Tarragona para clubes, torneos y eventos de empresa, con tu logo, colores y texto. Unidades sueltas o series.',
     },
     {
         slug: 'producto-logo-imagen',
@@ -111,7 +111,7 @@ export const PRODUCTS = [
         related: ['producto-trofeos-personalizados', 'producto-llaveros-personalizados', 'producto-escudos-personalizados'],
         guide: ['Guía: tipos de logos 3D, tamaños, montaje y qué archivo enviar', '/blog/logos-y-letras-3d-para-negocios.html'],
         seoTitle: 'Logos y letras corpóreas 3D en Tarragona | Rótulos impresos en 3D',
-        seoDescription: 'Logos corpóreos, letras 3D y rótulos impresos en 3D en Tarragona para negocios, gimnasios, tiendas y eventos. Desde piezas de mostrador hasta más de 1 metro, con opción retroiluminada.',
+        seoDescription: 'Logos corpóreos, letras y rótulos impresos en 3D en Tarragona para negocios, gimnasios y eventos. De piezas de mostrador a más de 1 metro, retroiluminados.',
     },
     {
         slug: 'producto-llaveros-personalizados',
@@ -129,8 +129,8 @@ export const PRODUCTS = [
             'Fabricados en Tarragona.',
         ],
         related: ['producto-llaveros-spotify', 'producto-logo-imagen', 'producto-fotos-impresas'],
-        seoTitle: 'Llaveros personalizados en Tarragona con logo o nombre | Impresos en 3D',
-        seoDescription: 'Llaveros personalizados impresos en 3D en Tarragona: con tu logo, nombre o diseño. Por unidades o en cantidad para empresas, clubes, bodas y eventos. Presupuesto gratis por WhatsApp.',
+        seoTitle: 'Llaveros personalizados en Tarragona con tu logo o nombre',
+        seoDescription: 'Llaveros personalizados impresos en 3D en Tarragona con tu logo, nombre o diseño. Por unidades o en cantidad para empresas, clubes, bodas y eventos.',
         content: `
                 <h2>Llaveros personalizados en Tarragona para empresas, clubes y eventos</h2>
                 <p>Fabricamos llaveros personalizados impresos en 3D en nuestro taller de Tarragona. Puedes pedir un único llavero con un nombre o una serie de cientos de unidades con el logo de tu empresa. Como diseñamos cada modelo desde cero, el llavero puede tener la forma de tu logo, varios colores, relieve y texto por las dos caras.</p>
@@ -170,7 +170,8 @@ export const PRODUCTS = [
             'Fabricados en Tarragona.',
         ],
         related: ['producto-llaveros-personalizados', 'producto-fotos-impresas', 'producto-escudos-personalizados'],
-        seoTitle: 'Llaveros Spotify personalizados (pack de 3) | 9,94 € | Tu Impresión en 3D',
+        seoTitle: 'Llaveros Spotify personalizados (pack de 3) | 9,94 €',
+        seoDescription: 'Tu canción favorita en un llavero con código de Spotify escaneable, impreso en 3D. Pack de 3 por 9,94 € con envío gratis a la España peninsular.',
     },
     {
         slug: 'producto-nike-jordan',
