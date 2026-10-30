@@ -10,6 +10,8 @@ import { LANDINGS, CA } from './landings.mjs';
 
 const pages = [];
 const add = (p, priority = '0.6', lastmod = TODAY) => pages.push({ ...p, priority, lastmod });
+// Google corta los títulos a ~60 caracteres: la marca solo se añade si cabe
+const withBrand = (t) => (t.length + NAME.length + 3 <= 60 ? `${t} | ${NAME}` : t);
 
 // ======================================================================
 // FAQ principal (se reutiliza en inicio, servicios y llms.txt)
@@ -56,6 +58,13 @@ export const FAQ_HOME = [
         ['/producto-nike-jordan.html', 'zapatilla-jordan-impresa-3d-1', 'Zapatilla en miniatura impresa en 3D', 'Decoración', 'Zapatillas en miniatura', 'Réplicas detalladas para coleccionistas.'],
         ['/producto-llaveros-spotify.html', 'llaveros-spotify-3d', 'Llaveros con código de Spotify impresos en 3D', 'Merchandising', 'Llaveros Spotify', 'Tu canción favorita, siempre contigo.'],
         ['/producto-logo-imagen.html', 'letras-personalizadas-3d', 'Letras corpóreas impresas en 3D', 'Empresas', 'Letras corpóreas', 'Rótulos y letras 3D para tu negocio.'],
+    ];
+    // Solo valoraciones de encargos de impresión 3D, textos literales de Wallapop
+    const WALLAPOP_REVIEWS = 'https://es.wallapop.com/user/aitorc-414493075/reviews';
+    const reviews = [
+        ['Alejandro L.', 'Todo perfecto, impresión de buena calidad, cumpliendo plazos y a un precio económico', 'Caja para Raspberry Pi'],
+        ['Oscar T.', 'Servicio muy rápido, todo perfecto como habíamos quedado. Volveré a pedirle las piezas.', 'Piezas a medida'],
+        ['Isabel C.', 'Buen entendimiento, todo según lo acordado. Entrega rápida.', 'Impresión 3D por encargo'],
     ];
 
     const body = `
@@ -129,6 +138,24 @@ export const FAQ_HOME = [
                         <div class="media">${img(im, alt, { sizes: '(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 25vw' })}</div>
                         <div class="body"><span class="tag">${tag}</span><h3>${t}</h3><p>${d}</p></div>
                     </a>`).join('')}
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="opiniones" style="padding-top:0">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker">Opiniones</span>
+                    <h2>Lo que dicen nuestros clientes</h2>
+                    <p>Valoraciones reales de encargos de impresión 3D, copiadas tal cual de <a href="${WALLAPOP_REVIEWS}" target="_blank" rel="noopener">nuestro perfil de Wallapop</a> (5 de 5 estrellas).</p>
+                </div>
+                <div class="grid grid-3">
+                    ${reviews.map(([who, text, what]) => `
+                    <figure class="card" style="margin:0">
+                        <div aria-label="5 de 5 estrellas" style="color:var(--accent);letter-spacing:.1em">★★★★★</div>
+                        <blockquote style="margin:10px 0"><p>«${text}»</p></blockquote>
+                        <figcaption class="text-muted"><strong>${who}</strong> · ${what}</figcaption>
+                    </figure>`).join('')}
                 </div>
             </div>
         </section>
@@ -221,8 +248,8 @@ ${contactSection()}`;
         file: 'index.html',
         url: '/',
         active: '/',
-        title: 'Impresión 3D en Tarragona | Piezas a medida, llaveros y merchandising',
-        description: 'Servicio de impresión 3D en Tarragona: piezas a medida, prototipos, repuestos, logos 3D, llaveros personalizados, trofeos y merchandising. Diseño 3D incluido. Presupuesto gratis por WhatsApp.',
+        title: 'Impresión 3D en Tarragona | Piezas, llaveros y merchandising',
+        description: 'Impresión 3D en Tarragona: piezas a medida, prototipos, repuestos, logos, llaveros, trofeos y merchandising. Diseño 3D incluido. Presupuesto gratis.',
         alternates: { es: '/', ca: '/ca/' },
         jsonld: [businessLd, websiteLd, faqLd(FAQ_HOME)],
         preload: '\n    <link rel="preload" as="image" href="/assets/img/mascara-impresa-3d-taller-tarragona-sm.webp" imagesrcset="/assets/img/mascara-impresa-3d-taller-tarragona-sm.webp 960w, /assets/img/mascara-impresa-3d-taller-tarragona.webp 1920w" imagesizes="100vw" fetchpriority="high">',
@@ -347,8 +374,8 @@ ${contactSection({ heading: 'Cuéntanos tu proyecto', subject: 'Consulta de serv
         file: 'info.html',
         url: '/info.html',
         active: '/info.html',
-        title: 'Servicios de impresión 3D en Tarragona: piezas, diseño 3D y prototipos',
-        description: 'Impresión 3D bajo pedido en Tarragona: imprimimos tus archivos STL, diseñamos piezas a medida, hacemos prototipos y piezas de repuesto en PLA, PETG y ABS. Presupuesto gratis.',
+        title: 'Servicios de impresión 3D en Tarragona: diseño y prototipos',
+        description: 'Impresión 3D bajo pedido en Tarragona: imprimimos tus STL, diseñamos piezas a medida, prototipos y repuestos en PLA, PETG y ABS. Presupuesto gratis.',
         jsonld: [
             {
                 '@context': 'https://schema.org',
@@ -408,8 +435,8 @@ const productCard = (p, sizes = '(max-width: 640px) 100vw, (max-width: 1000px) 5
         file: 'tienda.html',
         url: '/tienda.html',
         active: '/tienda.html',
-        title: 'Regalos personalizados impresos en 3D | Tienda online desde Tarragona',
-        description: 'Regalos y productos personalizados impresos en 3D en Tarragona: escudos con nombre, porta alianzas, fotos en relieve, trofeos, llaveros y antiestrés. Envío gratis a la España peninsular.',
+        title: 'Regalos personalizados impresos en 3D | Tienda online',
+        description: 'Regalos personalizados impresos en 3D: escudos con nombre, porta alianzas, fotos en relieve, trofeos, llaveros y antiestrés. Envío gratis a la península.',
         jsonld: [
             breadcrumbLd([['Inicio', '/'], ['Tienda', '/tienda.html']]),
             {
@@ -567,7 +594,7 @@ ${ctaBand('¿Lo quieres a tu manera?', 'Personalizamos cualquier producto: tama�
         file: `${p.slug}.html`,
         url,
         active: '/tienda.html',
-        title: p.seoTitle || `${p.name}${/en 3D/.test(p.name) ? '' : ' en 3D'} | ${p.price != null ? fmt(p.price) + ' | ' : ''}Tu Impresión en 3D`,
+        title: p.seoTitle || withBrand(`${p.name}${/en 3D/.test(p.name) ? '' : ' en 3D'}${p.price != null ? ' | ' + fmt(p.price) : ''}`),
         description: p.seoDescription || `${p.short} ${p.price != null ? `Precio: ${priceLabel(p)}. Envío gratis a la España peninsular.` : 'Pide presupuesto sin compromiso.'} Hecho en Tarragona.`,
         ogType: 'product',
         ogImage: `/assets/img/${p.images[0][0]}.webp`,
@@ -682,8 +709,8 @@ ${ctaBand()}`;
         file: 'Projects/Logo-150cm-impreso-en-3d.html',
         url,
         active: '/Projects/',
-        title: 'Logo de 150 cm impreso en 3D: proyecto paso a paso | Tu Impresión en 3D',
-        description: 'Cómo diseñamos, imprimimos en 60 piezas y montamos un logo retroiluminado de 150 cm para Scorpii Calisthenics. Proyecto de impresión 3D de gran formato en Tarragona.',
+        title: 'Logo de 150 cm impreso en 3D: proyecto paso a paso',
+        description: 'Cómo diseñamos, imprimimos en 60 piezas y montamos un logo retroiluminado de 150 cm para Scorpii Calisthenics. Gran formato en Tarragona.',
         ogType: 'article',
         ogImage: '/assets/img/logo-retroiluminado-impreso-3d.webp',
         jsonld: [
@@ -751,8 +778,8 @@ ${ctaBand()}`;
         file: 'blog/index.html',
         url: '/blog/',
         active: '/blog/',
-        title: 'Guías de impresión 3D: precios, materiales y cómo encargar | Tu Impresión en 3D',
-        description: 'Guías prácticas de impresión 3D: cuánto cuesta imprimir en 3D, qué material elegir, cómo encargar una pieza, repuestos, logos para negocios y trofeos personalizados.',
+        title: 'Guías de impresión 3D: precios, materiales y cómo encargar',
+        description: 'Guías prácticas de impresión 3D: cuánto cuesta, qué material elegir, cómo encargar una pieza, repuestos, logos para negocios y trofeos personalizados.',
         jsonld: [breadcrumbLd([['Inicio', '/'], ['Blog', '/blog/']])],
         body,
     }), '0.7');
@@ -846,7 +873,7 @@ ${content}
             file: `blog/${a.slug}.html`,
             url,
             active: '/blog/',
-            title: `${a.seoTitle || a.title} | Tu Impresión en 3D`,
+            title: withBrand(a.seoTitle || a.title),
             description: a.description,
             ogType: 'article',
             ogImage: `/assets/img/${a.image}.webp`,
