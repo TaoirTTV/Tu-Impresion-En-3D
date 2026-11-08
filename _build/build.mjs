@@ -34,7 +34,7 @@ export const FAQ_HOME = [
     ['¿Trabajáis con empresas?',
         'Sí. Hacemos prototipos, piezas funcionales, utillaje, series cortas, logos corpóreos, trofeos y merchandising para empresas, clubes, academias y comercios.'],
     ['¿Hacéis llaveros y merchandising personalizado en Tarragona?',
-        'Sí. Fabricamos <a href="/producto-llaveros-personalizados.html">llaveros personalizados</a> con tu logo o nombre, trofeos, imanes, expositores y regalos de empresa, desde una unidad hasta series para ferias y eventos. Mira todas las opciones en <a href="/merchandising-personalizado-tarragona.html">merchandising personalizado</a>.'],
+        'Sí. Fabricamos <a href="/producto-llaveros-personalizados.html">llaveros personalizados en Tarragona</a> con tu logo o nombre, trofeos, imanes, expositores y regalos de empresa, desde una unidad hasta series para ferias y eventos. Mira todas las opciones en <a href="/merchandising-personalizado-tarragona.html">merchandising personalizado</a>.'],
 ];
 
 // ======================================================================
@@ -510,7 +510,7 @@ for (const p of PRODUCTS) {
 ${gallery}
                     <div class="product-info">
                         <span class="tag">${p.category}</span>
-                        <h1 class="mt-0" style="margin-top:10px">${esc(p.name)}</h1>
+                        <h1 class="mt-0" style="margin-top:10px">${esc(p.h1 || p.name)}</h1>
                         ${priceHtml}
                         <p class="description">${esc(p.description)}</p>
 ${actions}

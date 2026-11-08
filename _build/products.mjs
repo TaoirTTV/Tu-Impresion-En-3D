@@ -116,17 +116,18 @@ export const PRODUCTS = [
     {
         slug: 'producto-llaveros-personalizados',
         name: 'Llaveros personalizados',
+        h1: 'Llaveros personalizados en Tarragona',
         short: 'Llaveros con tu logo, nombre o diseño. Por unidades o en cantidad para empresas.',
         category: 'Merchandising',
         price: null,
-        images: [['llaveros-personalizados-3d', 'Caja de madera con llaveros personalizados impresos en 3D']],
+        images: [['llaveros-personalizados-3d', 'Caja de madera con llaveros personalizados con logo impresos en 3D en Tarragona']],
         description:
             'Llaveros únicos con el diseño que elijas: nombre, logo, forma o mensaje especial. Perfectos como merchandising para tu empresa o club, detalles para bodas y eventos o regalos.',
         details: [
             'Cualquier forma, texto y combinación de colores.',
             'Precio según cantidad y tamaño: cuantas más unidades, más económico.',
             'Ideal para merchandising, bodas, comuniones y eventos.',
-            'Fabricados en Tarragona.',
+            'Fabricados en Tarragona, con recogida en mano o envío.',
         ],
         related: ['producto-llaveros-spotify', 'producto-logo-imagen', 'producto-fotos-impresas'],
         seoTitle: 'Llaveros personalizados en Tarragona con tu logo o nombre',
@@ -142,8 +143,18 @@ export const PRODUCTS = [
                     <li><strong>Comercios y alojamientos:</strong> llaveros identificativos para habitaciones, taquillas o llaves de alquiler turístico.</li>
                     <li><strong>Regalos:</strong> con el nombre de una persona, la silueta de tu mascota o un mensaje. Si te gusta la música, prueba los <a href="/producto-llaveros-spotify.html">llaveros Spotify</a>.</li>
                 </ul>
+                <h3>Tipos de llaveros que hacemos</h3>
+                <ul>
+                    <li><strong>Llaveros con logo:</strong> con el contorno de tu marca y sus colores, en relieve.</li>
+                    <li><strong>Llaveros con nombre:</strong> letras recortadas o en relieve sobre una base, ideales para regalos y detalles de invitados.</li>
+                    <li><strong>Llaveros con escudo:</strong> para clubes deportivos, peñas, collas castelleras y asociaciones.</li>
+                    <li><strong>Llaveros con número o texto:</strong> para habitaciones, taquillas, apartamentos turísticos o llaves de oficina.</li>
+                    <li><strong>Llaveros con <a href="/producto-llaveros-spotify.html">código de Spotify</a></strong> o con forma libre a partir de una foto o dibujo.</li>
+                </ul>
+                <h3>¿Cuánto cuesta un llavero personalizado?</h3>
+                <p>El precio depende del tamaño, del número de colores y sobre todo de la cantidad. Un llavero suelto con nombre cuesta unos pocos euros, y en series de 50 o 100 unidades el precio por llavero baja bastante porque el diseño se hace una sola vez. Te damos un presupuesto cerrado y gratis antes de fabricar. Tienes más referencias en nuestra <a href="/blog/cuanto-cuesta-imprimir-en-3d.html">guía de precios de impresión 3D</a>.</p>
                 <h3>Cómo pedirlos</h3>
-                <p>Envíanos por WhatsApp o email tu logo (PNG, SVG o PDF) o una idea, la cantidad y la fecha en la que los necesitas. Te mandamos una propuesta de diseño y un presupuesto cerrado. Cuantas más unidades, más baja el precio de cada llavero. Entregamos en Tarragona, Reus, Salou, Cambrils y el resto del Camp de Tarragona, y enviamos a toda España.</p>`,
+                <p>Envíanos por WhatsApp o email tu logo (PNG, SVG o PDF) o una idea, la cantidad y la fecha en la que los necesitas. Te mandamos una propuesta de diseño y un presupuesto cerrado. Cuantas más unidades, más baja el precio de cada llavero. Si estás en Tarragona puedes recogerlos en mano; también entregamos en Reus, Salou, Cambrils y el resto del Camp de Tarragona, y enviamos a toda España.</p>`,
         faqs: [
             ['¿Cuántos llaveros personalizados tengo que pedir como mínimo?', 'Puedes pedir desde una sola unidad. Para merchandising de empresa lo habitual son series de 25, 50, 100 o más llaveros; cuantas más unidades, más económico sale cada uno.'],
             ['¿Podéis hacer llaveros con el logo de mi empresa?', 'Sí. Partimos de tu logo en imagen (mejor en PNG con fondo transparente, SVG o PDF), lo convertimos en un modelo 3D y te enseñamos el diseño antes de fabricar.'],
